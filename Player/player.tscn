@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cprchu81l4nwd"]
+
+[ext_resource type="PackedScene" uid="uid://k66gdk7jwqjw" path="res://Assets/Player/cube.glb" id="1_l8h54"]
+[ext_resource type="Script" uid="uid://bysm0bo0smcmh" path="res://Player/behavior.gd" id="2_4ntmi"]
+[ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Player/rotate_pivot.gd" id="2_btcbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ntmi"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="Animation" id="Animation_btcbx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gwnis"]
+resource_name = "swipe_left"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.5),
+"transitions": PackedFloat32Array(0.1894645, 0.1894645, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.34906584, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k53q1"]
+resource_name = "swipe_right"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(0.18946472, 0.18946472, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.34906584, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k53q1"]
+_data = {
+&"RESET": SubResource("Animation_btcbx"),
+&"swipe_left": SubResource("Animation_gwnis"),
+&"swipe_right": SubResource("Animation_k53q1")
+}
+
+[node name="Player" type="CharacterBody3D" unique_id=404199503]
+transform = Transform3D(0.005113774, 0, 0.99998695, 0, 1, 0, -0.99998695, 0, 0.005113774, 0, 0, 0)
+collision_mask = 10
+script = ExtResource("2_4ntmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=553318898]
+shape = SubResource("BoxShape3D_4ntmi")
+
+[node name="pivot" type="Node3D" parent="." unique_id=1140655542]
+script = ExtResource("2_btcbx")
+
+[node name="character" parent="pivot" unique_id=1146374012 instance=ExtResource("1_l8h54")]
+
+[node name="anim" type="AnimationPlayer" parent="." unique_id=658573878]
+libraries/ = SubResource("AnimationLibrary_k53q1")
+speed_scale = 2.0
+
+[node name="bufferTimer" type="Timer" parent="." unique_id=1727155462]
+wait_time = 0.2
+one_shot = true
+ignore_time_scale = true
+
+[connection signal="timeout" from="bufferTimer" to="." method="_on_buffer_timer_timeout"]

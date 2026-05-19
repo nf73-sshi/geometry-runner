@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dcyt6ahs0x66l"]
+
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="1_43fy4"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="2_vtnqf"]
+[ext_resource type="PackedScene" uid="uid://c2qmciaq7aa17" path="res://Orbs/Yellow/yellow_orb.tscn" id="3_uaxro"]
+[ext_resource type="PackedScene" uid="uid://brfy68j8mo1nv" path="res://Pads/Yellow/yellow_pad.tscn" id="4_6vbb0"]
+
+[node name="Michigun" type="Node3D" unique_id=1838828311]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Base" parent="." unique_id=1736002682 instance=ExtResource("1_43fy4")]
+size = Vector3(50, 4, 10)
+
+[node name="Spike" parent="." unique_id=1813310228 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="Spike3" parent="Spike" unique_id=1024937857 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Spike2" parent="Spike" unique_id=2120525617 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Spike4" parent="Spike" unique_id=392541612 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Spike5" parent="Spike" unique_id=385302478 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="Spike6" parent="Spike" unique_id=1073562998 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="Spike7" parent="Spike" unique_id=963002723 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Spike8" parent="Spike" unique_id=124108126 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="Spike9" parent="Spike" unique_id=1570991698 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="YellowOrb2" parent="." unique_id=1270773630 instance=ExtResource("3_uaxro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 9, -6.993822e-07)
+
+[node name="YellowPad" parent="." unique_id=1390887695 instance=ExtResource("4_6vbb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -4.371139e-07)

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bq0yo718fa6p2"]
+
+[ext_resource type="Script" uid="uid://boxhqedqd5jgu" path="res://Pads/pad.gd" id="1_34xt8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bt8d5"]
+size = Vector3(2, 0.4, 2)
+
+[node name="Pad" type="Node3D" unique_id=1390887695]
+script = ExtResource("1_34xt8")
+
+[node name="Area" type="Area3D" parent="." unique_id=1197172963]
+collision_layer = 8
+monitorable = false
+
+[node name="hitbox" type="CollisionShape3D" parent="Area" unique_id=582174574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_bt8d5")
+debug_color = Color(0, 1, 0, 1)
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bkc1r2a6wkn8k"]
+
+[ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="1_rwxi6"]
+[ext_resource type="Script" uid="uid://c5pr1coge61d2" path="res://Menu/menu.gd" id="1_w6voe"]
+[ext_resource type="Texture2D" uid="uid://gterpnn6ofm6" path="res://Menu/background/title.png" id="2_ofseh"]
+[ext_resource type="Texture2D" uid="uid://dkjkns6hsvlp1" path="res://Menu/Buttons/play.png" id="2_raj00"]
+[ext_resource type="Script" uid="uid://di11q0mhb4hdo" path="res://addons/action_button/action_button.gd" id="3_8w4re"]
+[ext_resource type="Script" uid="uid://bbmr3yytorn4r" path="res://addons/action_button/action_button_effect.gd" id="4_8w4re"]
+
+[sub_resource type="Resource" id="Resource_ofseh"]
+script = ExtResource("4_8w4re")
+scale = Vector2(1.1, 1.1)
+metadata/_custom_type_script = "uid://bbmr3yytorn4r"
+
+[node name="Menu" type="Node2D" unique_id=1095637281]
+script = ExtResource("1_w6voe")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=573015302]
+
+[node name="BG" type="Control" parent="UI" unique_id=993376640]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="UI/BG" unique_id=678926441]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rwxi6")
+expand_mode = 1
+
+[node name="title" type="TextureRect" parent="UI/BG" unique_id=1549426148]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -336.0
+offset_top = 51.0
+offset_right = 571.0
+offset_bottom = 428.0
+grow_horizontal = 2
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ofseh")
+expand_mode = 1
+
+[node name="Buttons" type="Control" parent="UI" unique_id=1854129820]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="play" type="Button" parent="UI/Buttons" unique_id=98337431]
+layout_mode = 0
+offset_left = -187.0
+offset_top = -73.0
+offset_right = 242.0
+offset_bottom = 114.0
+icon = ExtResource("2_raj00")
+icon_alignment = 1
+script = ExtResource("3_8w4re")
+on_button_down = SubResource("Resource_ofseh")
+metadata/_custom_type_script = "uid://di11q0mhb4hdo"
+
+[connection signal="pressed" from="UI/Buttons/play" to="." method="_on_play_pressed"]

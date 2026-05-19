@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ct6lytkbycpod"]
+
+[ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
+[ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
+[ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="2_1r4le"]
+[ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="4_jcm6v"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="6_qmv3x"]
+[ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
+[ext_resource type="PackedScene" uid="uid://dcyt6ahs0x66l" path="res://Chunks/chunk_1.tscn" id="8_buohc"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1r4le"]
+panorama = ExtResource("2_1r4le")
+
+[sub_resource type="Sky" id="Sky_jcm6v"]
+sky_material = SubResource("PanoramaSkyMaterial_1r4le")
+
+[sub_resource type="Environment" id="Environment_bk3v5"]
+background_mode = 2
+sky = SubResource("Sky_jcm6v")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Game" type="Node3D" unique_id=848886703]
+script = ExtResource("1_fwxkx")
+
+[node name="Player" parent="." unique_id=404199503 instance=ExtResource("1_bk3v5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -13)
+
+[node name="world" type="WorldEnvironment" parent="." unique_id=141869575]
+environment = SubResource("Environment_bk3v5")
+
+[node name="thorn and cursed thorn" parent="." unique_id=1426107567 instance=ExtResource("3_7raqb")]
+transform = Transform3D(-0.9998387, 0, 0.017958561, 0, 1, 0, -0.017958561, 0, -0.9998387, -2.3689976, 5.1208296, 78.925964)
+
+[node name="Double" parent="." unique_id=1813310228 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 37)
+
+[node name="Spike" parent="Double" unique_id=1401487479 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 0, 0, 2.083507)
+
+[node name="Double2" parent="." unique_id=1407452045 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 57)
+
+[node name="Spike" parent="Double2" unique_id=1777529105 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 0, 0, 2.083507)
+
+[node name="Double3" parent="." unique_id=1213079150 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 57)
+
+[node name="Spike" parent="Double3" unique_id=1604480487 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 0, 0, 2.083507)
+
+[node name="deadTimer" type="Timer" parent="." unique_id=1441579405]
+one_shot = true
+ignore_time_scale = true
+
+[node name="Floor" parent="." unique_id=1736002682 instance=ExtResource("6_qmv3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+size = Vector3(10, 4, 26)
+
+[node name="Cam" type="Camera3D" parent="." unique_id=14667063]
+transform = Transform3D(-1, -5.3290705e-15, -8.742277e-08, -4.3711385e-08, 0.86602545, 0.5, 7.571034e-08, 0.5, -0.86602545, 0, 14.534079, -21.145859)
+script = ExtResource("7_oomkl")
+
+[node name="Block2" parent="." unique_id=2057728178 instance=ExtResource("6_qmv3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 41)
+
+[node name="Block5" parent="." unique_id=324180161 instance=ExtResource("6_qmv3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 49)
+
+[node name="Block3" parent="." unique_id=125956271 instance=ExtResource("6_qmv3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 49)
+size = Vector3(10, 2, 2)
+
+[node name="Block4" parent="." unique_id=1136003974 instance=ExtResource("6_qmv3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 57)
+
+[node name="Spike4" parent="." unique_id=743477068 instance=ExtResource("4_jcm6v")]
+transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 0, 9, 57)
+
+[node name="Michigun" parent="." unique_id=1838828311 instance=ExtResource("8_buohc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 10)
+
+[connection signal="dead" from="Player" to="." method="_on_player_dead"]
+[connection signal="dead" from="Player" to="Cam" method="_on_player_dead"]
+[connection signal="timeout" from="deadTimer" to="." method="_on_dead_timer_timeout"]
