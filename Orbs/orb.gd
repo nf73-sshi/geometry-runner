@@ -1,5 +1,4 @@
 class_name Orb
-
 extends Node3D
 
 @export var multi_trigger : bool = false
@@ -21,16 +20,16 @@ func _Trigger(player):
 		
 	if not multi_trigger:
 		used = true
-		player.need_to_jump = false
+		player.need_to_trigger_interact = false
 		_OnTrigger(player)
 
 func _physics_process(delta: float) -> void:
 	_OnProcess(delta)
 	if not can_be_used:
 		return
-	
-	var current = App.player
-	if current != null and current.need_to_jump:
+		
+	var current : Player = App.player
+	if current != null and current.need_to_trigger_interact:
 		_Trigger(current)
 
 func _on_area_body_entered(body: Node3D) -> void:

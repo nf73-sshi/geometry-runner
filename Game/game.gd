@@ -1,8 +1,9 @@
 extends Node3D
 
 func _ready() -> void:
-	Engine.time_scale = 1.1
+	Engine.time_scale = 1.2
 	App.player = $Player
+	App.gravity_scale = 1.0
 	
 func _on_player_dead() -> void:
 	App.player = null
@@ -10,3 +11,7 @@ func _on_player_dead() -> void:
 
 func _on_dead_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://Menu/menu.tscn")
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("reboot"):
+		get_tree().reload_current_scene()

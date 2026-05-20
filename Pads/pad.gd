@@ -1,3 +1,4 @@
+class_name Pad
 extends Node3D
 
 @export var multi_trigger : bool = false
