@@ -11,9 +11,8 @@ extends StaticBody3D
 func update_size():
 	$inside.mesh.size = Vector3(size.x - 0.1, size.y - 0.1, size.z - 0.1)
 	$glow.mesh.size = size
-	$hitbox.shape.size = Vector3(size.x, 0.1, size.z)
-	$hitbox.position.y = size.y * 0.5 - 0.1
-	$killbox/hitbox.shape.size = Vector3(size.x, size.y - 0.5, size.z)
+	$hitbox.shape.size = size
+	$killbox/hitbox.shape.size = Vector3(size.x + 0.01, size.y - 0.35, size.z + 0.01)
 	
 func _ready() -> void:
 	update_size()

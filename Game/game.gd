@@ -6,6 +6,7 @@ func _ready() -> void:
 	App.gravity_scale = 1.0
 	
 func _on_player_dead() -> void:
+	$TopView.stop_follow = true
 	App.player = null
 	$deadTimer.start()
 

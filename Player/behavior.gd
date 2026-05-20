@@ -65,15 +65,25 @@ func _ready() -> void:
 	pass 
 
 func _physics_process(delta):
-	print(App.gravity_scale)
+	velocity.x = 0.0
+	velocity.z = App.player_speed	
 	if global_position.y < -50.0:
 		_Kill()
 		return
 	
+	#if App.gravity_scale > 0.0:
+		#if is_on_ceiling():
+			#_Kill()
+			#return
+	#else:
+		#if is_on_floor():
+			#_Kill()
+			#return
+	
 	_KeyboardInputs()
 	
 	if need_to_jump:
-		if is_on_floor():
+		if (App.gravity_scale >= 0.0 and is_on_floor()) or (App.gravity_scale < 0 and is_on_ceiling()):
 			need_to_trigger_interact = false
 			if not holding:
 				need_to_jump = false		
@@ -81,14 +91,13 @@ func _physics_process(delta):
 	
 	var cible_x : float = start_pos.x - (current_lane * 2.5)
 	global_position.x = move_toward(global_position.x, cible_x, App.player_speed * 2.0 * delta)
-	
-	global_position.z += delta * App.player_speed	
+
 	velocity.y = clampf(velocity.y - App.gravity_scale * (App.player_fall_speed * delta), -App.player_max_velocity_y, App.player_max_velocity_y)
 
-	if not is_on_floor():
-		rotation_degrees.x += delta * 300.0
+	if not is_on_floor() and not is_on_ceiling():
+		$Pivot.rotation_degrees.x += App.gravity_scale * delta * 300.0
 	else:
-		rotation_degrees.x = round(rotation_degrees.x / 90.0) * 90.0
+		$Pivot.rotation_degrees.x = round($Pivot.rotation_degrees.x / 90.0) * 90.0
 	
 	move_and_slide()
 

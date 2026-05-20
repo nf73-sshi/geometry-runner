@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dcyt6ahs0x66l"]
+
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="1_43fy4"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="2_vtnqf"]
+[ext_resource type="PackedScene" uid="uid://bl4g1un1utykh" path="res://Pads/Blue/blue_pad.tscn" id="6_7fbk0"]
+
+[node name="Michigun" type="Node3D" unique_id=1838828311]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Base" parent="." unique_id=1736002682 instance=ExtResource("1_43fy4")]
+size = Vector3(50, 4, 10)
+
+[node name="Base2" parent="." unique_id=1967316398 instance=ExtResource("1_43fy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
+size = Vector3(50, 4, 10)
+
+[node name="Spike" parent="." unique_id=1813310228 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 3, -6.119594e-07)
+
+[node name="Spike3" parent="Spike" unique_id=1024937857 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Spike2" parent="Spike" unique_id=2120525617 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Spike4" parent="Spike" unique_id=392541612 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Spike5" parent="Spike" unique_id=385302478 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="Spike6" parent="Spike" unique_id=1073562998 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="Spike7" parent="Spike" unique_id=963002723 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Spike8" parent="Spike" unique_id=124108126 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="Spike9" parent="Spike" unique_id=1570991698 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="Spike3" parent="." unique_id=1361834495 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 3, 6.119594e-07)
+
+[node name="Spike3" parent="Spike3" unique_id=1091288695 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Spike2" parent="Spike3" unique_id=686112201 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Spike4" parent="Spike3" unique_id=891512867 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Spike5" parent="Spike3" unique_id=1037903706 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="Spike6" parent="Spike3" unique_id=1019583459 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="Spike7" parent="Spike3" unique_id=586398643 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Spike8" parent="Spike3" unique_id=433177466 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="Spike9" parent="Spike3" unique_id=766847393 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="Spike2" parent="." unique_id=88538912 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(-1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -1, -3.821371e-15, 8.742278e-08, 3.821371e-15, 1, 0, 10, 0)
+
+[node name="Spike3" parent="Spike2" unique_id=748905517 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Spike2" parent="Spike2" unique_id=231822668 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Spike4" parent="Spike2" unique_id=221361473 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Spike5" parent="Spike2" unique_id=1048620170 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="Spike6" parent="Spike2" unique_id=753215756 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="Spike7" parent="Spike2" unique_id=1226984176 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Spike8" parent="Spike2" unique_id=1657201425 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2.9999998)
+
+[node name="Spike9" parent="Spike2" unique_id=1288686684 instance=ExtResource("2_vtnqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="BluePad" parent="." unique_id=1390887695 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -4.371139e-07)
+
+[node name="BluePad3" parent="." unique_id=433926444 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -3.0000005)
+
+[node name="BluePad4" parent="." unique_id=1992287339 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, 2.9999995)
+
+[node name="BluePad2" parent="." unique_id=2077614583 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(-1, 8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 3.821371e-15, 8.742278e-08, -3.821371e-15, 1, -4, 11, 1.7484555e-07)
+
+[node name="BluePad5" parent="." unique_id=1583250685 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(-1, 8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 3.821371e-15, 8.742278e-08, -3.821371e-15, 1, -4, 11, -2.9999998)
+
+[node name="BluePad6" parent="." unique_id=634857191 instance=ExtResource("6_7fbk0")]
+transform = Transform3D(-1, 8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 3.821371e-15, 8.742278e-08, -3.821371e-15, 1, -3.9999995, 11, 3.0000002)

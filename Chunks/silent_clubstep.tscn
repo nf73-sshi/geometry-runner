@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://btt6rtujebfs4"]
+
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="1_3pste"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="2_ar4vj"]
+[ext_resource type="PackedScene" uid="uid://hh8cyca4e1ub" path="res://Orbs/Blue/blue_orb.tscn" id="3_54edf"]
+[ext_resource type="PackedScene" uid="uid://bl4g1un1utykh" path="res://Pads/Blue/blue_pad.tscn" id="4_atn4i"]
+
+[node name="SilentClubstep" type="Node3D" unique_id=1659037882]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Base" parent="." unique_id=1736002682 instance=ExtResource("1_3pste")]
+size = Vector3(50, 4, 10)
+
+[node name="Monster" type="Node3D" parent="." unique_id=1149861783]
+
+[node name="Spike" parent="Monster" unique_id=1813310228 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 3, 1.0490733e-06)
+
+[node name="Spike2" parent="Monster/Spike" unique_id=1675803201 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6700001, 0, -1.0490733e-06)
+
+[node name="Spike3" parent="Monster/Spike/Spike2" unique_id=752962157 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6700001, 0, 0)
+
+[node name="Spike4" parent="Monster/Spike/Spike2/Spike3" unique_id=714669499 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6599998, 0, 8.305164e-07)
+
+[node name="Spike2" parent="Monster" unique_id=471212006 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(-1, 8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 3.821371e-15, 8.742278e-08, -3.821371e-15, 1, -19, 10, 8.305164e-07)
+
+[node name="Spike2" parent="Monster/Spike2" unique_id=756905482 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6700001, 0, -1.0490733e-06)
+
+[node name="Spike3" parent="Monster/Spike2/Spike2" unique_id=2016968678 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6700001, 0, 0)
+
+[node name="Spike4" parent="Monster/Spike2/Spike2/Spike3" unique_id=1229045165 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6599998, 0, 8.305164e-07)
+
+[node name="Block3" parent="Monster" unique_id=1411541501 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 12, 0)
+size = Vector3(9, 2, 2)
+
+[node name="Block4" parent="Monster" unique_id=1638562808 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 16, 0)
+size = Vector3(9, 2, 2)
+
+[node name="Block8" parent="Monster" unique_id=1545339442 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.5, 16, 0)
+size = Vector3(9, 2, 2)
+
+[node name="Block5" parent="Monster" unique_id=418935547 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.74546, 14, -9.8549094e-08)
+size = Vector3(1.5, 2, 2)
+
+[node name="Block6" parent="Monster" unique_id=746660966 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.234844, 14, 2.2882227e-07)
+size = Vector3(1.5, 2, 2)
+
+[node name="Block7" parent="Monster" unique_id=1710401268 instance=ExtResource("1_3pste")]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -21.5, 15.311108, 0)
+size = Vector3(5, 5, 2)
+
+[node name="Block9" parent="Monster" unique_id=549993471 instance=ExtResource("1_3pste")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -21.5, 26.311108, 0)
+size = Vector3(5, 20, 2)
+
+[node name="Spike8" parent="Monster" unique_id=1839498385 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 18, 3.934025e-07)
+
+[node name="Spike9" parent="Monster" unique_id=2015931681 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 18, 6.993822e-07)
+
+[node name="BlueOrb" parent="Monster" unique_id=1657560102 instance=ExtResource("3_54edf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 14, 8.305164e-07)
+
+[node name="BlueOrb2" parent="Monster" unique_id=555464093 instance=ExtResource("3_54edf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 14, 1.0490733e-06)
+
+[node name="Pillar" type="Node3D" parent="." unique_id=1161287947]
+
+[node name="Block" parent="Pillar" unique_id=156749520 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3, 3.934025e-07)
+
+[node name="Block2" parent="Pillar" unique_id=72394481 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 18, 5.68248e-07)
+size = Vector3(2, 20, 2)
+
+[node name="Spike5" parent="Pillar" unique_id=1248045075 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 5, 0)
+
+[node name="Spike10" parent="Pillar" unique_id=308408656 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(-1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -1, -3.821371e-15, 8.742278e-08, 3.821371e-15, 1, -13, 7, 1.7484552e-07)
+
+[node name="Spike6" parent="Pillar" unique_id=1771007982 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -8.742279e-08)
+
+[node name="Spike7" parent="Pillar" unique_id=538974961 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3, 8.742279e-08)
+
+[node name="Spam" type="Node3D" parent="." unique_id=7424925]
+
+[node name="BluePad" parent="Spam" unique_id=1390887695 instance=ExtResource("4_atn4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 2.1855695e-07)
+
+[node name="Orbs" type="Node3D" parent="Spam" unique_id=1976649037]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BlueOrb3" parent="Spam/Orbs" unique_id=2117578200 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 2)
+
+[node name="BlueOrb4" parent="Spam/Orbs" unique_id=1944608904 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 2)
+
+[node name="BlueOrb5" parent="Spam/Orbs" unique_id=897907708 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 2)
+
+[node name="BlueOrb6" parent="Spam/Orbs" unique_id=1699583530 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 4)
+
+[node name="BlueOrb7" parent="Spam/Orbs" unique_id=1750477809 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 4)
+
+[node name="BlueOrb8" parent="Spam/Orbs" unique_id=646293139 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 4)
+
+[node name="BlueOrb9" parent="Spam/Orbs" unique_id=41977650 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 6)
+
+[node name="BlueOrb10" parent="Spam/Orbs" unique_id=1964921023 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 6)
+
+[node name="BlueOrb11" parent="Spam/Orbs" unique_id=1273567756 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 6)
+
+[node name="BlueOrb12" parent="Spam/Orbs" unique_id=1103087590 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 8)
+
+[node name="BlueOrb13" parent="Spam/Orbs" unique_id=1011385045 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 8)
+
+[node name="BlueOrb14" parent="Spam/Orbs" unique_id=220256762 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 8)
+
+[node name="BlueOrb15" parent="Spam/Orbs" unique_id=1301254416 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 10)
+
+[node name="BlueOrb16" parent="Spam/Orbs" unique_id=1616312999 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 10)
+
+[node name="BlueOrb17" parent="Spam/Orbs" unique_id=268761820 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 10)
+
+[node name="BlueOrb18" parent="Spam/Orbs" unique_id=76704422 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 12)
+
+[node name="BlueOrb19" parent="Spam/Orbs" unique_id=1722751404 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 12)
+
+[node name="BlueOrb20" parent="Spam/Orbs" unique_id=70917457 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 12)
+
+[node name="BlueOrb21" parent="Spam/Orbs" unique_id=1259141448 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 14)
+
+[node name="BlueOrb22" parent="Spam/Orbs" unique_id=219182632 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 14)
+
+[node name="BlueOrb23" parent="Spam/Orbs" unique_id=1922988841 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 14)
+
+[node name="BlueOrb24" parent="Spam/Orbs" unique_id=373481834 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 16)
+
+[node name="BlueOrb25" parent="Spam/Orbs" unique_id=1981804598 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 16)
+
+[node name="BlueOrb26" parent="Spam/Orbs" unique_id=90491301 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 16)
+
+[node name="BlueOrb27" parent="Spam/Orbs" unique_id=40274842 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 18)
+
+[node name="BlueOrb28" parent="Spam/Orbs" unique_id=949891269 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 18)
+
+[node name="BlueOrb29" parent="Spam/Orbs" unique_id=2052277070 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 18)
+
+[node name="BlueOrb30" parent="Spam/Orbs" unique_id=2090572007 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 16, 20)
+
+[node name="BlueOrb31" parent="Spam/Orbs" unique_id=1354676381 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 14, 20)
+
+[node name="BlueOrb32" parent="Spam/Orbs" unique_id=1446365197 instance=ExtResource("3_54edf")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 18, 20)
+
+[node name="Block" parent="Spam" unique_id=1574683291 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6, -4.808253e-07)
+size = Vector3(20, 10, 2)
+
+[node name="Spike8" parent="Spam/Block" unique_id=1041490270 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, 0)
+
+[node name="Spike9" parent="Spam/Block" unique_id=786974364 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 6, -8.742279e-08)
+
+[node name="Spike10" parent="Spam/Block" unique_id=1047574139 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6, -1.7484558e-07)
+
+[node name="Spike11" parent="Spam/Block" unique_id=1738061918 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -2.6226837e-07)
+
+[node name="Spike12" parent="Spam/Block" unique_id=1366397218 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 6, -3.4969116e-07)
+
+[node name="Spike13" parent="Spam/Block" unique_id=463729078 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, -4.371139e-07)
+
+[node name="Spike14" parent="Spam/Block" unique_id=1748886401 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -5.2453663e-07)
+
+[node name="Spike15" parent="Spam/Block" unique_id=467220070 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6, -6.119594e-07)
+
+[node name="Spike16" parent="Spam/Block" unique_id=318145241 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 6, -6.993822e-07)
+
+[node name="Spike17" parent="Spam/Block" unique_id=1713459641 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -7.868051e-07)
+
+[node name="Block3" parent="Spam" unique_id=1623108423 instance=ExtResource("1_3pste")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 8, -1.0490733e-06)
+size = Vector3(6, 12, 2)
+
+[node name="Block4" parent="Spam" unique_id=719374504 instance=ExtResource("1_3pste")]
+transform = Transform3D(-1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -1, -3.821371e-15, 8.742278e-08, 3.821371e-15, 1, 24, 24, -1.0490733e-06)
+size = Vector3(6, 12, 2)
+
+[node name="Block2" parent="Spam" unique_id=2016227435 instance=ExtResource("1_3pste")]
+transform = Transform3D(-1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -1, -3.821371e-15, 8.742278e-08, 3.821371e-15, 1, 11, 26, -4.808253e-07)
+size = Vector3(20, 10, 2)
+
+[node name="Spike8" parent="Spam/Block2" unique_id=1248221759 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, 0)
+
+[node name="Spike9" parent="Spam/Block2" unique_id=1560891845 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 6, -8.742279e-08)
+
+[node name="Spike10" parent="Spam/Block2" unique_id=564767274 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 6, -1.7484558e-07)
+
+[node name="Spike11" parent="Spam/Block2" unique_id=669447021 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 6, -2.6226837e-07)
+
+[node name="Spike12" parent="Spam/Block2" unique_id=583677744 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 6, -3.4969116e-07)
+
+[node name="Spike13" parent="Spam/Block2" unique_id=255646434 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, -4.371139e-07)
+
+[node name="Spike14" parent="Spam/Block2" unique_id=336041401 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, -5.2453663e-07)
+
+[node name="Spike15" parent="Spam/Block2" unique_id=868123846 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6, -6.119594e-07)
+
+[node name="Spike16" parent="Spam/Block2" unique_id=619264089 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 6, -6.993822e-07)
+
+[node name="Spike17" parent="Spam/Block2" unique_id=1072209590 instance=ExtResource("2_ar4vj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 6, -7.868051e-07)

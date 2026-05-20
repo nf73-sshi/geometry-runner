@@ -17,6 +17,7 @@ func _Trigger(player):
 	if not multi_trigger:
 		used = true
 		player.need_to_jump = false
+		player.need_to_trigger_interact = false
 		_OnTrigger(player)
 
 func _physics_process(delta: float) -> void:

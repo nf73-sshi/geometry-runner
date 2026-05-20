@@ -1,4 +1,4 @@
 extends Pad
 
 func _OnTrigger(player: Player):
-	player._Jump(40.0)
+	player._Jump(25.0)

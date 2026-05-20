@@ -4,5 +4,4 @@ func _OnProcess(delta : float):
 	rotate(rotate_dir, delta * 5)
 	
 func _OnTrigger(player: Player):
-	App.gravity_scale *= -1.0
-	player._Jump(clampf(abs(player.velocity.y) + 5.0, 0.0, App.player_max_velocity_y))
+	player.velocity.y = -App.gravity_scale * App.player_max_velocity_y
