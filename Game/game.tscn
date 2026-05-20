@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
 [ext_resource type="PackedScene" uid="uid://dcyt6ahs0x66l" path="res://Chunks/michigun.tscn" id="8_buohc"]
 [ext_resource type="PackedScene" uid="uid://cw0fu6iel6api" path="res://Chunks/chunk_2.tscn" id="9_kul4i"]
+[ext_resource type="PackedScene" uid="uid://bq215mhs66i55" path="res://Chunks/chunk_3.tscn" id="10_7gi1t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1r4le"]
 panorama = ExtResource("2_1r4le")
@@ -36,17 +37,17 @@ near = 1.0
 environment = SubResource("Environment_bk3v5")
 
 [node name="thorn and cursed thorn" parent="." unique_id=1426107567 instance=ExtResource("3_7raqb")]
-transform = Transform3D(-0.9998387, 0, 0.017958561, 0, 1, 0, -0.017958561, 0, -0.9998387, -2.3689976, 5.1208296, 148.92596)
+transform = Transform3D(-0.9998387, 0, 0.017958561, 0, 1, 0, -0.017958561, 0, -0.9998387, -2.3689976, 17.12083, 123.925964)
 
 [node name="deadTimer" type="Timer" parent="." unique_id=1441579405]
 one_shot = true
 ignore_time_scale = true
 
 [node name="Michigun" parent="." unique_id=1838828311 instance=ExtResource("8_buohc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 54)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 104)
 
 [node name="SilentClubstep" parent="." unique_id=1659037882 instance=ExtResource("7_buohc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 104)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 154)
 
 [node name="Beginning" parent="." unique_id=1736002682 instance=ExtResource("6_qmv3x")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -7)
@@ -62,7 +63,10 @@ script = ExtResource("7_oomkl")
 transform = Transform3D(9.061151e-08, 0.371367, 0.92848617, 0.49999994, 0.8040926, -0.32161337, -0.86602545, 0.46424305, -0.18568343, 41.00003, 3.3049674, -18.876587)
 
 [node name="Chunk2" parent="." unique_id=841037623 instance=ExtResource("9_kul4i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 66)
+
+[node name="Chunk3" parent="." unique_id=1634803345 instance=ExtResource("10_7gi1t")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 28)
 
 [connection signal="dead" from="Player" to="." method="_on_player_dead"]
 [connection signal="dead" from="Player" to="TopView" method="_on_player_dead"]
