@@ -19,7 +19,13 @@ var middle_screen_x : float = 0.0
 func _Kill():
 	dead.emit()
 	queue_free()
-	
+
+func _CanJump() -> bool:
+	return (App.gravity_scale >= 0.0 and is_on_floor()) or (App.gravity_scale < 0 and is_on_ceiling())
+
+func _IsOnSurface() -> bool:
+	return is_on_floor() or is_on_ceiling()
+
 func _Jump(intensity):	
 	velocity.y = App.gravity_scale * intensity
 	
@@ -70,34 +76,14 @@ func _physics_process(delta):
 	if global_position.y < -50.0:
 		_Kill()
 		return
-	
-	#if App.gravity_scale > 0.0:
-		#if is_on_ceiling():
-			#_Kill()
-			#return
-	#else:
-		#if is_on_floor():
-			#_Kill()
-			#return
-	
+
 	_KeyboardInputs()
-	
-	if need_to_jump:
-		if (App.gravity_scale >= 0.0 and is_on_floor()) or (App.gravity_scale < 0 and is_on_ceiling()):
-			need_to_trigger_interact = false
-			if not holding:
-				need_to_jump = false		
-			_Jump(App.player_jump_impulse)
-	
+
 	var cible_x : float = start_pos.x - (current_lane * 2.5)
 	global_position.x = move_toward(global_position.x, cible_x, App.player_speed * 2.0 * delta)
-
-	velocity.y = clampf(velocity.y - App.gravity_scale * (App.player_fall_speed * delta), -App.player_max_velocity_y, App.player_max_velocity_y)
-
-	if not is_on_floor() and not is_on_ceiling():
-		$Pivot.rotation_degrees.x += App.gravity_scale * delta * 300.0
-	else:
-		$Pivot.rotation_degrees.x = round($Pivot.rotation_degrees.x / 90.0) * 90.0
+	
+	if not App.player_ignore_gravity:
+		velocity.y = clampf(velocity.y - App.gravity_scale * (App.player_fall_speed * delta), -App.player_max_velocity_y, App.player_max_velocity_y)
 	
 	move_and_slide()
 

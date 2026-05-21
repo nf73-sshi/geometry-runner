@@ -37,6 +37,7 @@ import/blender/enabled=false
 [global_group]
 
 Block="walkable"
+GameMode=""
 
 [input]
 

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ctilsskg1cgx0"]
+
+[ext_resource type="Script" uid="uid://lhl6hor7cyil" path="res://Portal/portal.gd" id="1_oixwc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oixwc"]
+resource_local_to_scene = true
+
+[sub_resource type="TorusMesh" id="TorusMesh_mjwqv"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_oixwc")
+inner_radius = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjwqv"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_oixwc"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_mjwqv")
+flip_faces = true
+inner_radius = 0.8
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oixwc"]
+size = Vector3(2, 4, 2)
+
+[node name="Portal" type="Node3D" unique_id=1868742556]
+transform = Transform3D(2.9802322e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 2.9802322e-08, 0, 0, 0)
+script = ExtResource("1_oixwc")
+
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=1663228350]
+transform = Transform3D(1.5, 0, 0, 0, -3.059797e-07, -2, 0, 7, -8.742278e-08, 0, 0, 0)
+mesh = SubResource("TorusMesh_mjwqv")
+
+[node name="glow" type="MeshInstance3D" parent="." unique_id=309655731]
+transform = Transform3D(1.6, 0, 0, 0, -3.934025e-07, -2.1, 0, 9, -9.1793915e-08, 0, 0, 0)
+mesh = SubResource("TorusMesh_oixwc")
+
+[node name="hitbox" type="Area3D" parent="." unique_id=1052109189]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox" unique_id=1890953648]
+shape = SubResource("BoxShape3D_oixwc")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

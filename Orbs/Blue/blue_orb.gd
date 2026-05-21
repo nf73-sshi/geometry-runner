@@ -5,4 +5,4 @@ func _OnProcess(delta : float):
 	
 func _OnTrigger(player: Player):
 	player._Jump(15.0)
-	App.gravity_scale *= -1.0
+	App._ReverseGravity()
