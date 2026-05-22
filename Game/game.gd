@@ -1,7 +1,7 @@
 extends Node3D
 
 func _ready() -> void:
-	Engine.time_scale = 1.2
+	Engine.time_scale = 1.25
 	App._Reset()
 	App.player = $Player
 	

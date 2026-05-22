@@ -7,6 +7,8 @@ var ship = preload("res://Player/Ship/ship.tscn")
 var ball = preload("res://Player/Ball/ball.tscn")
 var ufo = preload("res://Player/Ufo/ufo.tscn")
 var wave = preload("res://Player/Wave/wave.tscn")
+var robot = preload("res://Player/Robot/robot.tscn")
+
 
 var player_ignore_gravity : bool = false
 var player_speed : float = 15.0
@@ -35,7 +37,6 @@ func _ChangeGameMode(mode : GAMEMODE):
 	player.velocity.y *= 0.5
 	
 	for child in player.get_children():
-		print(child)
 		if child.is_in_group("GameMode"):
 			child.queue_free()
 		
@@ -50,6 +51,8 @@ func _ChangeGameMode(mode : GAMEMODE):
 			player.add_child(ufo.instantiate())
 		GAMEMODE.Wave:
 			player.add_child(wave.instantiate())
+		GAMEMODE.Robot:
+			player.add_child(robot.instantiate())
 		
 
 func _SetGravityScale(val):

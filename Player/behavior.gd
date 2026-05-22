@@ -3,6 +3,9 @@ class_name Player
 extends CharacterBody3D
 signal dead
 
+var noclip : bool = true
+var death_amount : int = 0
+
 enum INPUT {LEFT, JUMP, RIGHT}
 var start_pos : Vector3 = Vector3.ZERO
 
@@ -17,6 +20,12 @@ var need_to_trigger_interact : bool = false
 var middle_screen_x : float = 0.0
 		
 func _Kill():
+	death_amount += 1
+	print("You died : %d" % death_amount)
+	
+	if noclip:
+		return
+	
 	dead.emit()
 	queue_free()
 

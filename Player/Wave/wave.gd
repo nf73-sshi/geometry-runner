@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		parent.velocity.y = -App.gravity_scale * App.player_speed
 
 	if parent._IsOnSurface():
-		rotation_degrees.x = 90.0
+		parent._Kill()
 	else:
 		if parent.velocity.y > 0.0:
 			rotation_degrees.x = angle

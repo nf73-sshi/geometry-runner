@@ -18,6 +18,7 @@ size = Vector3(126, 4, 10)
 
 [node name="Base2" parent="." unique_id=943117705 instance=ExtResource("1_43fy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 12, -5.638769e-06)
+visible = false
 size = Vector3(300, 4, 10)
 
 [node name="ufo" type="Node3D" parent="." unique_id=419107884]
