@@ -9,7 +9,6 @@ func _ready() -> void:
 	parent = get_parent()
 
 func _exit_tree() -> void:
-	App._SetGravityScale(1.0)
 	App.player_max_velocity_y = 60.0
 	App.player_ignore_gravity = false
 
@@ -19,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		if not parent.holding:
 			parent.need_to_jump = false		
 			
-		parent.velocity.y = clampf(parent.velocity.y + App.gravity_scale * (App.player_fall_speed * delta), -App.player_max_velocity_y, App.player_max_velocity_y)
+		parent.velocity.y = clampf(parent.velocity.y + App.gravity_scale * (App.player_fall_speed * delta) * 1.1, -App.player_max_velocity_y, App.player_max_velocity_y)
 	else:
 		App.player_ignore_gravity = false
 		

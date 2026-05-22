@@ -36,4 +36,4 @@ shape = SubResource("BoxShape3D_4ntmi")
 libraries/ = SubResource("AnimationLibrary_k53q1")
 speed_scale = 2.0
 
-[node name="Cube" parent="." unique_id=465939523 groups=["GameMode"] instance=ExtResource("2_btcbx")]
+[node name="Cube" parent="." unique_id=465939523 instance=ExtResource("2_btcbx")]

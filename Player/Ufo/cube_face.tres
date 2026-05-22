@@ -1,0 +1,39 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://t17lsejutgic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xy83e"]
+resource_name = "Light_Blue"
+cull_mode = 2
+albedo_color = Color(0.15293537, 0.99607795, 0.9960784, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_toabe"]
+_surfaces = [{
+"aabb": AABB(-0.57473826, -0.28385895, 1, 1.1494765, 0.8211613, 1e-05),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABAACAAYAAwAHAAUACAAEAAYACQAFAAcACAAGAAoACwAIAAoACwAKAAwACQANAAUADgANAAkADgAPAA0AEAAPAA4AEAARAA8AEgARABAAEgATABEAFAATABIAFAAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsA"),
+"name": "Light_Blue",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("0qoAAAAAAABvnZxBAAAAANKqnEEAAAAAb50AAAAAAADV5gAAAAAAAP9/nEEAAAAA1eacQQAAAAD/fwAAAAAAAAT3AAAAAAAAj2IAAAAAAAAE95xBAAAAAP//AAAAAAAA//+cQQAAAACPYpxBAAAAACxVAAAAAAAALFWcQQAAAAApGQAAAAAAACkZnEEAAAAA+ggAAAAAAAD6CJxBAAAAAAAAAAAAAAAAAACcQQAAAADV5kuuAAAAANKq//8AAAAA1eb//wAAAADSqkuuAAAAACkZS64AAAAALFX//wAAAAAsVUuuAAAAACkZ//8AAAAA")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Sketchfab_Scene_Object_1"
+_surfaces = [{
+"aabb": AABB(-0.57473826, -0.28385895, 1, 1.1494765, 0.8211613, 1e-05),
+"attribute_data": PackedByteArray("yHQ/1996hdrfej/XyHSF2t96/9/IdP/fyHT40996+NPIdLLQ33qy0Mh0N8/fejfPeIn40wiQP9cIkPjTeIk/18h0P9ffeoXayHSF2t96/9/IdP/f33o/18h0+NPfevjTyHSy0N96stDIdDfP33o3z3iJ+NMIkD/XeIk/1wiQ+NM="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABgAAAAIABgACAAcACAAGAAcACAAHAAkACgAIAAkACgAJAAsADAANAA4ADAAPAA0AEAARABIAEgARABMAEgATABQAEAAVABEAFgAVABAAFgAXABUAGAAXABYAGAAZABcAGgAZABgAGgAbABkAHAAdAB4AHAAfAB0A"),
+"material": SubResource("StandardMaterial3D_xy83e"),
+"name": "Light_Blue",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("0qoAAAAA/z9vnZxBAAD/P9KqnEEAAP8/b50AAAAA/z//f5xBAAD/P/9/AAAAAP8/1eYAAAAA/z/V5pxBAAD/PwT3AAAAAP8/BPecQQAA/z///wAAAAD/P///nEEAAP8/1eZLrgAA/z/Sqv//AAD/P9Xm//8AAP8/0qpLrgAA/z8sVQAAAAD/v49inEEAAP+/j2IAAAAA/7//f5xBAAD/v/9/AAAAAP+/LFWcQQAA/78pGQAAAAD/vykZnEEAAP+/+ggAAAAA/7/6CJxBAAD/vwAAAAAAAP+/AACcQQAA/78pGUuuAAD/vyxV//8AAP+/LFVLrgAA/78pGf//AAD/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_toabe")

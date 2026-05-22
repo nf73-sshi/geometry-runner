@@ -2,7 +2,7 @@ extends Node3D
 
 func _ready() -> void:
 	Engine.time_scale = 1.2
-	App.gravity_scale = 1.0
+	App._Reset()
 	App.player = $Player
 	
 func _on_player_dead() -> void:

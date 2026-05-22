@@ -26,6 +26,9 @@ func _CanJump() -> bool:
 func _IsOnSurface() -> bool:
 	return is_on_floor() or is_on_ceiling()
 
+func _ChangeHitboxSize(size):
+	$CollisionShape3D.shape.size = size
+
 func _Jump(intensity):	
 	velocity.y = App.gravity_scale * intensity
 	

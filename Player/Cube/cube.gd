@@ -4,7 +4,8 @@ var parent : Player = null
 
 func _ready() -> void:
 	parent = get_parent()
-
+	App._SetGravityScale(1.0)
+	
 func _physics_process(delta: float) -> void:
 	if parent.need_to_jump:
 		if parent._CanJump():
