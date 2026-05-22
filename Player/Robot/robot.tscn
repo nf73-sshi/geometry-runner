@@ -579,7 +579,7 @@ transform = Transform3D(-4.8082526e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, -4.8082526e-
 
 [node name="anim" type="AnimationPlayer" parent="Pivot" unique_id=401774021]
 libraries/ = SubResource("AnimationLibrary_6581l")
-speed_scale = 1.25
+speed_scale = 1.5
 
 [node name="LeftLeg" type="Node3D" parent="Pivot" unique_id=811534466]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2, 0, 0.54)

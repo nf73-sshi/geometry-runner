@@ -3,6 +3,7 @@ extends Node3D
 var parent : Player = null
 
 func _ready() -> void:
+	$Pivot/anim.play("walk")
 	parent = get_parent()
 	App._SetGravityScale(1.0)
 	
