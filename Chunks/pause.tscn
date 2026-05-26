@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c07tbh2whp32s"]
+
+[ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_7arhd"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_gnh4v"]
+
+[node name="Pause" unique_id=661201130 instance=ExtResource("1_7arhd")]
+
+[node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
+aabb = AABB(-5, -2, -10, 10, 4, 20)
+
+[node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_gnh4v")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+size = Vector3(20, 4, 10)

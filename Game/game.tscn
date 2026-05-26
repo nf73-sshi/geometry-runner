@@ -3,11 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
 [ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
-[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="6_qmv3x"]
+[ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/pause.tscn" id="7_buohc"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
-[ext_resource type="PackedScene" uid="uid://dcyt6ahs0x66l" path="res://Chunks/michigun.tscn" id="8_buohc"]
-[ext_resource type="PackedScene" uid="uid://cw0fu6iel6api" path="res://Chunks/chunk_2.tscn" id="9_kul4i"]
-[ext_resource type="PackedScene" uid="uid://bq215mhs66i55" path="res://Chunks/chunk_3.tscn" id="10_7gi1t"]
 
 [sub_resource type="Gradient" id="Gradient_oomkl"]
 offsets = PackedFloat32Array(0, 0.52307695, 1)
@@ -28,7 +25,7 @@ sky = SubResource("Sky_jcm6v")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 
-[node name="Game" type="Node3D" unique_id=848886703]
+[node name="Game" type="Node3D" unique_id=848886703 groups=["Game"]]
 script = ExtResource("1_fwxkx")
 
 [node name="Player" parent="." unique_id=404199503 instance=ExtResource("1_bk3v5")]
@@ -48,10 +45,6 @@ transform = Transform3D(-0.9998387, 0, 0.017958561, 0, 1, 0, -0.017958561, 0, -0
 one_shot = true
 ignore_time_scale = true
 
-[node name="Beginning" parent="." unique_id=1736002682 instance=ExtResource("6_qmv3x")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -7)
-size = Vector3(20, 4, 10)
-
 [node name="TopView" type="Camera3D" parent="." unique_id=14667063]
 transform = Transform3D(-1, -5.3290705e-15, -8.742277e-08, -4.3711385e-08, 0.86602545, 0.5, 7.571034e-08, 0.5, -0.86602545, 0, 14.362839, -20.447062)
 current = true
@@ -61,17 +54,10 @@ script = ExtResource("7_oomkl")
 [node name="GDView" type="Camera3D" parent="TopView" unique_id=1809593245]
 transform = Transform3D(-1.3696621e-08, 1.127508e-07, 1, 0.5, 0.86602545, -9.0796746e-08, -0.86602545, 0.5, -6.823703e-08, 23.00004, 6.635084, -14.6445675)
 projection = 1
-current = true
 size = 53.37
 
-[node name="Chunk2" parent="." unique_id=841037623 instance=ExtResource("9_kul4i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71, 0, 66)
-
-[node name="Michigun" parent="." unique_id=1838828311 instance=ExtResource("8_buohc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -105, 0, 24)
-
-[node name="Chunk3" parent="." unique_id=1634803345 instance=ExtResource("10_7gi1t")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 38)
+[node name="Pause" parent="." unique_id=757582669 instance=ExtResource("7_buohc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
 [connection signal="dead" from="Player" to="." method="_on_player_dead"]
 [connection signal="dead" from="Player" to="TopView" method="_on_player_dead"]

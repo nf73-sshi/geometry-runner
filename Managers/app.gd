@@ -1,5 +1,8 @@
 extends Node
 
+signal on_reset
+
+#Gamemodes
 enum GAMEMODE {Cube, Ship, Ball, Ufo, Wave, Robot, Spider, Swing}
 var current_game_mode : GAMEMODE = GAMEMODE.Cube
 var cube = preload("res://Player/Cube/cube.tscn")
@@ -9,7 +12,7 @@ var ufo = preload("res://Player/Ufo/ufo.tscn")
 var wave = preload("res://Player/Wave/wave.tscn")
 var robot = preload("res://Player/Robot/robot.tscn")
 
-
+#Player
 var player_ignore_gravity : bool = false
 var player_speed : float = 15.0
 var player_fall_speed = 98
@@ -19,7 +22,7 @@ var player_max_velocity_y = 60.0
 var player : Player = null
 var gravity_scale : float = 1.0
 
-func _Reset():	
+func _Reset():
 	player_ignore_gravity = false
 	player_speed = 15.0
 	player_fall_speed = 98
@@ -28,6 +31,8 @@ func _Reset():
 	current_game_mode = GAMEMODE.Cube
 	player = null
 	gravity_scale = 1.0
+
+	on_reset.emit()
 
 func _ChangeGameMode(mode : GAMEMODE):
 	if player == null or current_game_mode == mode:

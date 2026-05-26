@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bp7x6vc4bcoat"]
+
+[ext_resource type="Script" uid="uid://bush46ui736sk" path="res://Chunks/scripts/chunk.gd" id="1_787i5"]
+
+[node name="Chunk" type="Node3D" unique_id=661201130 groups=["Chunk"]]
+script = ExtResource("1_787i5")
+
+[node name="ScreenVisibility" type="VisibleOnScreenNotifier3D" parent="." unique_id=349079856]
+aabb = AABB(-5, -2, -1, 10, 4, 2)
+
+[connection signal="screen_exited" from="ScreenVisibility" to="." method="_on_screen_visibility_screen_exited"]

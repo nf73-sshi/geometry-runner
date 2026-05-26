@@ -2,141 +2,136 @@
 
 [ext_resource type="Script" uid="uid://c4ql7drtgqadx" path="res://Chunks/scripts/chunk_3.gd" id="1_3dute"]
 [ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="1_itrnu"]
+[ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_tqmse"]
 [ext_resource type="PackedScene" uid="uid://c2qmciaq7aa17" path="res://Orbs/Yellow/yellow_orb.tscn" id="2_718ii"]
 [ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="3_6k4w3"]
-[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Portal/portal.tscn" id="5_tqmse"]
 
-[node name="Chunk3" type="Node3D" unique_id=1634803345]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+[node name="Chunk3" unique_id=661201130 instance=ExtResource("1_tqmse")]
 script = ExtResource("1_3dute")
 
-[node name="Base" parent="." unique_id=1736002682 instance=ExtResource("1_itrnu")]
+[node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
+aabb = AABB(-5, -2, -35, 10, 4, 70)
+
+[node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("1_itrnu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 size = Vector3(70, 4, 10)
 
-[node name="YellowOrb" parent="." unique_id=1657560102 instance=ExtResource("2_718ii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.809662, 0)
+[node name="YellowOrb" parent="." index="2" unique_id=1657560102 instance=ExtResource("2_718ii")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 6, 0)
 
-[node name="YellowOrb2" parent="." unique_id=1123580613 instance=ExtResource("2_718ii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 5.809662, -9.1793913e-07)
+[node name="YellowOrb2" parent="." index="3" unique_id=699913773 instance=ExtResource("2_718ii")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 6, 20.5)
 
-[node name="YellowOrb3" parent="." unique_id=1977836215 instance=ExtResource("2_718ii")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 5.809662, 8.742278e-07)
+[node name="YellowOrb3" parent="." index="4" unique_id=1479806370 instance=ExtResource("2_718ii")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 6, -20)
 
-[node name="Range" parent="." unique_id=1813310228 instance=ExtResource("3_6k4w3")]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -23, 2.5, 1.7206177e-06)
+[node name="Range" parent="." index="5" unique_id=1813310228 instance=ExtResource("3_6k4w3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.5, 0, 1, 0, -4.371139e-08, 0, 2.5, -23)
 
-[node name="Spike3" parent="Range" unique_id=873744282 instance=ExtResource("3_6k4w3")]
+[node name="Spike3" parent="Range" index="2" unique_id=1848539065 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
-[node name="Spike4" parent="Range" unique_id=797709517 instance=ExtResource("3_6k4w3")]
+[node name="Spike4" parent="Range" index="3" unique_id=777253132 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="Spike5" parent="Range" unique_id=2015591606 instance=ExtResource("3_6k4w3")]
+[node name="Spike5" parent="Range" index="4" unique_id=1219533205 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8.742279e-08)
 
-[node name="Spike6" parent="Range" unique_id=2096832145 instance=ExtResource("3_6k4w3")]
+[node name="Spike6" parent="Range" index="5" unique_id=882950933 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 
-[node name="Spike7" parent="Range" unique_id=232406369 instance=ExtResource("3_6k4w3")]
+[node name="Spike7" parent="Range" index="6" unique_id=605092293 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
 
-[node name="Spike8" parent="Range" unique_id=1844276374 instance=ExtResource("3_6k4w3")]
+[node name="Spike8" parent="Range" index="7" unique_id=233993045 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.7484558e-07)
 
-[node name="Spike9" parent="Range" unique_id=78259137 instance=ExtResource("3_6k4w3")]
+[node name="Spike9" parent="Range" index="8" unique_id=1707813520 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
 
-[node name="Spike10" parent="Range" unique_id=1592263244 instance=ExtResource("3_6k4w3")]
+[node name="Spike10" parent="Range" index="9" unique_id=237806792 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
 
-[node name="Spike11" parent="Range" unique_id=44159237 instance=ExtResource("3_6k4w3")]
+[node name="Spike11" parent="Range" index="10" unique_id=1031196059 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2.6226837e-07)
 
-[node name="Spike14" parent="Range" unique_id=1204323232 instance=ExtResource("3_6k4w3")]
+[node name="Spike14" parent="Range" index="11" unique_id=863267383 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2.6226837e-07)
 
-[node name="Spike12" parent="Range" unique_id=1848862752 instance=ExtResource("3_6k4w3")]
+[node name="Spike12" parent="Range" index="12" unique_id=923274832 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3.0000002)
 
-[node name="Spike13" parent="Range" unique_id=142863748 instance=ExtResource("3_6k4w3")]
+[node name="Spike13" parent="Range" index="13" unique_id=1959853426 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2.9999998)
 
-[node name="Range2" parent="." unique_id=896271237 instance=ExtResource("3_6k4w3")]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -3, 2.5, 8.4638987e-07)
+[node name="Range2" parent="." index="6" unique_id=1655492486 instance=ExtResource("3_6k4w3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.5, 0, 1, 0, -4.371139e-08, 0, 2.5, -3)
 
-[node name="Spike3" parent="Range2" unique_id=710649622 instance=ExtResource("3_6k4w3")]
+[node name="Spike3" parent="Range2" index="2" unique_id=429382690 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
-[node name="Spike4" parent="Range2" unique_id=479115299 instance=ExtResource("3_6k4w3")]
+[node name="Spike4" parent="Range2" index="3" unique_id=959142355 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="Spike5" parent="Range2" unique_id=1855554660 instance=ExtResource("3_6k4w3")]
+[node name="Spike5" parent="Range2" index="4" unique_id=763027436 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8.742279e-08)
 
-[node name="Spike6" parent="Range2" unique_id=1100799421 instance=ExtResource("3_6k4w3")]
+[node name="Spike6" parent="Range2" index="5" unique_id=1594663634 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 
-[node name="Spike7" parent="Range2" unique_id=1238275789 instance=ExtResource("3_6k4w3")]
+[node name="Spike7" parent="Range2" index="6" unique_id=1822484744 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
 
-[node name="Spike8" parent="Range2" unique_id=1212902242 instance=ExtResource("3_6k4w3")]
+[node name="Spike8" parent="Range2" index="7" unique_id=1634959325 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.7484558e-07)
 
-[node name="Spike9" parent="Range2" unique_id=371312033 instance=ExtResource("3_6k4w3")]
+[node name="Spike9" parent="Range2" index="8" unique_id=1628210646 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
 
-[node name="Spike10" parent="Range2" unique_id=1624503196 instance=ExtResource("3_6k4w3")]
+[node name="Spike10" parent="Range2" index="9" unique_id=2112164985 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
 
-[node name="Spike11" parent="Range2" unique_id=180441513 instance=ExtResource("3_6k4w3")]
+[node name="Spike11" parent="Range2" index="10" unique_id=676779335 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2.6226837e-07)
 
-[node name="Spike12" parent="Range2" unique_id=1199243901 instance=ExtResource("3_6k4w3")]
+[node name="Spike12" parent="Range2" index="11" unique_id=489386411 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3.0000002)
 
-[node name="Spike13" parent="Range2" unique_id=1065518096 instance=ExtResource("3_6k4w3")]
+[node name="Spike13" parent="Range2" index="12" unique_id=684769210 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2.9999998)
 
-[node name="Range3" parent="." unique_id=281507088 instance=ExtResource("3_6k4w3")]
-transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 18, 2.5, -7.1549266e-08)
+[node name="Range3" parent="." index="7" unique_id=1485947497 instance=ExtResource("3_6k4w3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.5, 0, 1, 0, -4.371139e-08, 0, 2.5, 17.5)
 
-[node name="Spike3" parent="Range3" unique_id=993758448 instance=ExtResource("3_6k4w3")]
+[node name="Spike3" parent="Range3" index="2" unique_id=1697352597 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
 
-[node name="Spike4" parent="Range3" unique_id=459985673 instance=ExtResource("3_6k4w3")]
+[node name="Spike4" parent="Range3" index="3" unique_id=487418281 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="Spike5" parent="Range3" unique_id=117293868 instance=ExtResource("3_6k4w3")]
+[node name="Spike5" parent="Range3" index="4" unique_id=73342774 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8.742279e-08)
 
-[node name="Spike6" parent="Range3" unique_id=1148248073 instance=ExtResource("3_6k4w3")]
+[node name="Spike6" parent="Range3" index="5" unique_id=946021510 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 
-[node name="Spike7" parent="Range3" unique_id=1604760286 instance=ExtResource("3_6k4w3")]
+[node name="Spike7" parent="Range3" index="6" unique_id=662084038 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
 
-[node name="Spike8" parent="Range3" unique_id=704364212 instance=ExtResource("3_6k4w3")]
+[node name="Spike8" parent="Range3" index="7" unique_id=1327084568 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.7484558e-07)
 
-[node name="Spike9" parent="Range3" unique_id=1970953971 instance=ExtResource("3_6k4w3")]
+[node name="Spike9" parent="Range3" index="8" unique_id=106813685 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
 
-[node name="Spike10" parent="Range3" unique_id=1979482172 instance=ExtResource("3_6k4w3")]
+[node name="Spike10" parent="Range3" index="9" unique_id=1844798269 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
 
-[node name="Spike11" parent="Range3" unique_id=1121287538 instance=ExtResource("3_6k4w3")]
+[node name="Spike11" parent="Range3" index="10" unique_id=1982435262 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2.6226837e-07)
 
-[node name="Spike12" parent="Range3" unique_id=975720192 instance=ExtResource("3_6k4w3")]
+[node name="Spike12" parent="Range3" index="11" unique_id=1198241441 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3.0000002)
 
-[node name="Spike13" parent="Range3" unique_id=416928677 instance=ExtResource("3_6k4w3")]
+[node name="Spike13" parent="Range3" index="12" unique_id=1531068008 instance=ExtResource("3_6k4w3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2.9999998)
-
-[node name="Portal" parent="." unique_id=1868742556 instance=ExtResource("5_tqmse")]
-transform = Transform3D(2.9802322e-08, 0, -1.0000001, 0, 1, 0, 1.0000001, 0, 2.9802322e-08, -34, 4, 1.4861872e-06)
-meshColor = Color(1, 1, 1, 1)
-gameMode = 5
-
-[node name="Block" parent="." unique_id=1746034608 instance=ExtResource("1_itrnu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 6.556708e-07)

@@ -7,103 +7,103 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("RightLeg/elbow_center:rotation")
+tracks/0/path = NodePath("Neck:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0, 7.1054274e-15, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("RightLeg/elbow_center:position")
+tracks/1/path = NodePath("LeftLeg/elbow_center:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.14239034, 0.14339185, 0)]
+"values": [Vector3(0.02, 0.01, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("RightLeg/elbow_center/elbow/leg_center:rotation")
+tracks/2/path = NodePath("LeftLeg/elbow_center:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, -0.7853982)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("RightLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
+tracks/3/path = NodePath("LeftLeg/elbow_center/elbow/leg_center:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, -1.0471976)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Neck:position")
+tracks/4/path = NodePath("LeftLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.2, 0.14, 0)]
+"values": [Vector3(1.7763566e-15, 1.05879106e-22, 2.9802322e-08)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Neck:rotation")
+tracks/5/path = NodePath("RightLeg/elbow_center:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 7.1054274e-15, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("LeftLeg/elbow_center:position")
+tracks/6/path = NodePath("RightLeg/elbow_center:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.02, 0.01, 0)]
+"values": [Vector3(0, 0, 0)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("LeftLeg/elbow_center:rotation")
+tracks/7/path = NodePath("RightLeg/elbow_center/elbow/leg_center:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(-0.1, -0.5, 0)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("LeftLeg/elbow_center/elbow/leg_center:rotation")
+tracks/8/path = NodePath("RightLeg/elbow_center/elbow/leg_center:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -115,14 +115,142 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("LeftLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
+tracks/9/path = NodePath("RightLeg/elbow_center/elbow/leg_center/leg/foot_center:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1.7763566e-15, 1.05879106e-22, 2.9802322e-08)]
+"values": [Vector3(0.02, -0.5, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("RightLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Neck:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.2, 0.14, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wny58"]
+resource_name = "fall"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.17453292)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightLeg/elbow_center/elbow/leg_center:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeftLeg/elbow_center/elbow/leg_center:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LeftLeg/elbow_center/elbow/leg_center/leg/foot_center:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
+}
+
+[sub_resource type="Animation" id="Animation_r0x2t"]
+resource_name = "jump"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Neck:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightLeg/elbow_center/elbow/leg_center:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.18675023)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeftLeg/elbow_center/elbow/leg_center:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6333333),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.18675023)]
 }
 
 [sub_resource type="Animation" id="Animation_aa3g1"]
@@ -171,10 +299,10 @@ tracks/3/path = NodePath("RightLeg/elbow_center/elbow/leg_center/leg/foot_center
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.19529055, 0.30704013, 0.4, 0.6, 0.6661577, 0.7073857, 0.76666665, 0.8333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 2.0000002, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.09302718, 0.19529055, 0.3, 0.4, 0.59769964, 0.6, 0.6661577, 0.7073857, 0.76666665, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 2.0000002, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, -1.0471976), Vector3(0, 0, -0.6981317), Vector3(1.0632444e-08, 3.3974807e-09, -0.15624525), Vector3(0, 0, -0.17453292), Vector3(-8.348752e-09, -3.3015112e-08, -1.3965639), Vector3(-4.206245e-09, -1.6633582e-08, -1.0933139), Vector3(3.1259596e-08, 9.428595e-09, -0.21522605), Vector3(0, 0, -0.7853982), Vector3(0, 0, -1.5027285)]
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.17453292), Vector3(0, 0, 0.61086524), Vector3(0, 0, 1.0471976), Vector3(0, 0, -0.17453292), Vector3(0, 0, -0.34906584), Vector3(0, 0, -0.34906584), Vector3(0, 0, -0.17453292), Vector3(0, 0, 1.0471976), Vector3(0, 0, 0.34906584), Vector3(0, 0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -231,10 +359,10 @@ tracks/8/path = NodePath("LeftLeg/elbow_center/elbow/leg_center:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(8.940697e-08, 0.13333336, 0.3, 0.50233066, 0.7, 0.8333333, 0.9333),
-"transitions": PackedFloat32Array(1, 0.30778694, 1.4640836, 1.8024974, 0.49999955, 1, 1.5),
+"times": PackedFloat32Array(0.1, 0.3, 0.4, 0.50233066, 0.7, 0.8333333, 0.9333),
+"transitions": PackedFloat32Array(2.0705273, 0.30778694, 1.4640836, 1.8024974, 0.49999955, 1, 1.5),
 "update": 0,
-"values": [Vector3(0, 0, -1.6277874), Vector3(0, 0, -1.2217305), Vector3(0, 0, -0.8826535), Vector3(-2.9215241e-09, 1.6025998e-09, -0.94561654), Vector3(-1.3257759e-08, 7.272534e-09, -1.1683774), Vector3(0, 0, -1.5707964), Vector3(0, 0, -2.0943952)]
+"values": [Vector3(0, 0, -2.0943952), Vector3(0, 0, -1.2217305), Vector3(0, 0, -0.8826535), Vector3(-2.9215241e-09, 1.6025998e-09, -0.94561654), Vector3(-1.3257759e-08, 7.272534e-09, -1.1683774), Vector3(0, 0, -1.5707964), Vector3(0, 0, -2.0943952)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -243,15 +371,17 @@ tracks/9/path = NodePath("LeftLeg/elbow_center/elbow/leg_center/leg/foot_center:
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.16666667, 0.46666667, 0.56666666, 0.72862387, 0.7974364, 0.9, 1.1194594),
-"transitions": PackedFloat32Array(2.0000002, 1, 0.329877, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.16666667, 0.23721932, 0.30931538, 0.46666667, 0.56666666, 0.72862387, 0.7974364, 0.9),
+"transitions": PackedFloat32Array(0.9999997, 0.4506252, 1, 1.0717734, 0.329877, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, -0.87266463), Vector3(0, 0, 0.87266463), Vector3(0, 0, 0), Vector3(0, 0, -0.2617994), Vector3(0, 0, 0.34906584), Vector3(0, 0, 1.0471976), Vector3(1.0632444e-08, 3.3974807e-09, -0.15624525), Vector3(0, 0, -1.0471976)]
+"values": [Vector3(0, 0, -0.34906584), Vector3(0, 0, 0.6859144), Vector3(0, 0, 1.1414453), Vector3(0, 0, 0.5934119), Vector3(0, 0, 0), Vector3(0, 0, -0.2617994), Vector3(0, 0, 0.34906584), Vector3(0, 0, 1.0471976), Vector3(1.0632444e-08, 3.3974807e-09, -0.15624525)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6581l"]
 _data = {
 &"RESET": SubResource("Animation_6581l"),
+&"fall": SubResource("Animation_wny58"),
+&"jump": SubResource("Animation_r0x2t"),
 &"walk": SubResource("Animation_aa3g1")
 }
 
@@ -579,7 +709,7 @@ transform = Transform3D(-4.8082526e-08, 0, -1.1, 0, 1.1, 0, 1.1, 0, -4.8082526e-
 
 [node name="anim" type="AnimationPlayer" parent="Pivot" unique_id=401774021]
 libraries/ = SubResource("AnimationLibrary_6581l")
-speed_scale = 1.5
+speed_scale = 2.0
 
 [node name="LeftLeg" type="Node3D" parent="Pivot" unique_id=811534466]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2, 0, 0.54)
@@ -592,7 +722,7 @@ transform = Transform3D(0.101606265, 0.09484101, -4.440892e-16, -0.09484101, 0.1
 mesh = SubResource("ArrayMesh_5nvti")
 
 [node name="leg_center" type="Node3D" parent="Pivot/LeftLeg/elbow_center/elbow" unique_id=1515693041]
-transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1, -0.100000024, -0.5, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.099999905, -0.5, 0)
 
 [node name="leg" type="MeshInstance3D" parent="Pivot/LeftLeg/elbow_center/elbow/leg_center" unique_id=1634455023]
 transform = Transform3D(0.45072448, -3.9631615, 1.4210855e-14, 3.9631615, 0.45072448, 0, 0, -2.842171e-14, 3.98871, 1.6816704, -0.07115245, -1.66893e-06)
@@ -609,24 +739,24 @@ mesh = SubResource("ArrayMesh_rndre")
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2, 0, -0.54)
 
 [node name="elbow_center" type="Node3D" parent="Pivot/RightLeg" unique_id=2005286645]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -0.14239034, 0.14339185, 0)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="elbow" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center" unique_id=1902067179]
 transform = Transform3D(0.101606265, 0.09484101, -4.440892e-16, -0.09484101, 0.101606265, 0, -4.440892e-16, 4.440892e-16, 0.13899153, -0.12679002, -0.16233754, 0.0004899502)
 mesh = SubResource("ArrayMesh_5nvti")
 
 [node name="leg_center" type="Node3D" parent="Pivot/RightLeg/elbow_center/elbow" unique_id=1719679938]
-transform = Transform3D(0.70710695, 0.70710695, 0, -0.70710695, 0.70710695, 0, 0, 0, 1.0000001, 0.10000014, -0.5000003, 0)
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -0.1, -0.5, 0)
 
 [node name="leg" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center" unique_id=2082191740]
 transform = Transform3D(0.45072418, -3.9631617, 1.4210855e-14, 3.9631617, 0.45072418, -3.5527137e-15, -5.3290705e-15, -2.842171e-14, 3.98871, 1.4816706, -0.07115215, -1.1920929e-06)
 mesh = SubResource("ArrayMesh_wny58")
 
 [node name="foot_center" type="Node3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center/leg" unique_id=397703801]
-transform = Transform3D(0.12535359, 0.21711883, 0, -0.21711883, 0.12535359, 0, 0, 0, 0.25070772, 0.02000013, -0.49999923, 1.7881393e-07)
+transform = Transform3D(0.25070718, 0, 0, 0, 0.25070718, 0, 0, 0, 0.25070772, 0.02, -0.5, 0)
 
 [node name="foot" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center/leg/foot_center" unique_id=1190059188]
-transform = Transform3D(6.852605, -2.1920893, -0.0019098064, 2.1920822, 6.852593, -0.013497122, 0.0059313616, 0.012273496, 7.1946707, 1.7653527, 0.13872576, 2.3841858e-07)
+transform = Transform3D(5.470877, 4.67257, 8.526513e-14, -4.6725707, 5.470877, -1.2789769e-13, 5.684342e-14, 5.967449e-16, 7.1946836, 0.3797462, -2.0126777, 0)
 mesh = SubResource("ArrayMesh_rndre")
 
 [node name="Neck" type="Node3D" parent="Pivot" unique_id=1586624216]

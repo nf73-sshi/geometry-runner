@@ -2,13 +2,28 @@ extends Node3D
 
 var parent : Player = null
 
+var resetted_anim : bool = false
+
 func _ready() -> void:
-	$Pivot/anim.play("walk")
+	$Pivot/anim.play("RESET")
 	parent = get_parent()
 	App._SetGravityScale(1.0)
 	
 func _physics_process(delta: float) -> void:
-	
+	if parent._IsOnSurface():
+		$Pivot/anim.play("walk")
+		resetted_anim = false
+	else:
+		if resetted_anim == false:
+			$Pivot/anim.play("RESET")
+			resetted_anim = true
+			return
+			
+		if parent.velocity.y * App.gravity_scale > 0.0:
+			$Pivot/anim.play("jump")
+		else:
+			$Pivot/anim.play("fall")
+			
 	if not $HoldTimer.is_stopped():		
 		if not parent.holding:
 			parent.need_to_jump = false		

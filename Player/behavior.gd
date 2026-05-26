@@ -47,9 +47,6 @@ func _Handle_swipe(direction):
 			_ApplyInput(INPUT.RIGHT)
 		else:
 			_ApplyInput(INPUT.LEFT)
-	else:
-		if direction.y < 0:
-			_ApplyInput(INPUT.JUMP)
 
 func _KeyboardInputs():
 	if Input.is_action_just_pressed("move_left"):
@@ -84,7 +81,6 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	velocity.x = 0.0
-	velocity.z = App.player_speed	
 	if global_position.y < -50.0:
 		_Kill()
 		return
