@@ -10,11 +10,10 @@
 script = ExtResource("1_3dute")
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-5, -2, -35, 10, 4, 70)
+aabb = AABB(-5, -2, -35, 10, 4, 90)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("1_itrnu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-size = Vector3(70, 4, 10)
+size = Vector3(10, 4, 70)
 
 [node name="YellowOrb" parent="." index="2" unique_id=1657560102 instance=ExtResource("2_718ii")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 6, 0)

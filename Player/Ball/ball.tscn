@@ -84,6 +84,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e18mj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu5tm"]
+cull_mode = 1
 albedo_color = Color(0, 1, 1, 1)
 
 [node name="Ball" type="Node3D" unique_id=1959824052 groups=["GameMode"]]
@@ -103,6 +104,6 @@ mesh = SubResource("ArrayMesh_ey5py")
 surface_material_override/0 = SubResource("StandardMaterial3D_65bum")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot" unique_id=335538011]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_65bum")
 surface_material_override/0 = SubResource("StandardMaterial3D_bu5tm")

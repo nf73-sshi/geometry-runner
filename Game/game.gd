@@ -15,7 +15,6 @@ func _on_dead_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://Menu/menu.tscn")
 	
 func _process(delta: float) -> void:
-	print(Engine.time_scale)
 	if Input.is_action_just_pressed("reboot"):
 		get_tree().reload_current_scene()
 	

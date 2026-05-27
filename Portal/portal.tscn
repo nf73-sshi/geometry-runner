@@ -30,7 +30,7 @@ flip_faces = true
 inner_radius = 0.8
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oixwc"]
-size = Vector3(2, 4, 2)
+size = Vector3(3, 4, 2)
 
 [sub_resource type="SphereMesh" id="SphereMesh_4s5ei"]
 material = ExtResource("2_hgvv3")
@@ -61,7 +61,6 @@ transform = Transform3D(1.6, 0, 0, 0, -3.934025e-07, -2.1, 0, 9, -9.1793915e-08,
 mesh = SubResource("TorusMesh_oixwc")
 
 [node name="hitbox" type="Area3D" parent="." unique_id=1052109189]
-visible = false
 collision_layer = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox" unique_id=1890953648]

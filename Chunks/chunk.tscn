@@ -6,6 +6,7 @@
 script = ExtResource("1_787i5")
 
 [node name="ScreenVisibility" type="VisibleOnScreenNotifier3D" parent="." unique_id=349079856]
-aabb = AABB(-5, -2, -1, 10, 4, 2)
+layers = 2
+aabb = AABB(-1, -2, -5, 2, 4, 10)
 
 [connection signal="screen_exited" from="ScreenVisibility" to="." method="_on_screen_visibility_screen_exited"]

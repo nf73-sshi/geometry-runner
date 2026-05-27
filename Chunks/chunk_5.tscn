@@ -3,16 +3,32 @@
 [ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_j14k0"]
 [ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_13h21"]
 [ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Portal/portal.tscn" id="3_13h21"]
+[ext_resource type="PackedScene" uid="uid://igmivtvt5pb0" path="res://Gravity Portal/gravity_portal.tscn" id="4_jaa5i"]
 
 [node name="Chunk5" unique_id=661201130 instance=ExtResource("1_j14k0")]
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-5, -2, -60, 10, 4, 120)
+aabb = AABB(-5, -2, -60, 10, 4, 150)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_13h21")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-size = Vector3(120, 4, 10)
+glow = true
+size = Vector3(10, 4, 120)
 
 [node name="Portal" parent="." index="2" unique_id=1868742556 instance=ExtResource("3_13h21")]
 transform = Transform3D(1.0000001, 0, 1.787744e-08, 0, 1, 0, -1.787744e-08, 0, 1.0000001, 0, 5.70636, -51)
-gameMode = 4
+gameMode = 1
+
+[node name="GravityPortal" parent="." index="3" unique_id=25750248 instance=ExtResource("4_jaa5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -35)
+type = 1
+
+[node name="GravityPortal2" parent="." index="4" unique_id=1161272320 instance=ExtResource("4_jaa5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -20)
+
+[node name="GravityPortal3" parent="." index="5" unique_id=1961147940 instance=ExtResource("4_jaa5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -9)
+type = 2
+
+[node name="GravityPortal4" parent="." index="6" unique_id=121263055 instance=ExtResource("4_jaa5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 3)
+type = 2
