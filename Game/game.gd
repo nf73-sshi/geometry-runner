@@ -20,8 +20,8 @@ func _process(delta: float) -> void:
 		get_tree().reload_current_scene()
 	
 func _on_speed_up_timeout() -> void:
-	if Engine.time_scale >= 2.975:
-		pass
+	if Engine.time_scale >= 3.0:
+		$SpeedUp.stop()
 	else:
 		if Engine.time_scale >= 2.45:
 			Engine.time_scale += 0.025

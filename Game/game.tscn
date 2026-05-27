@@ -3,27 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
 [ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
-[ext_resource type="PackedScene" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
+[ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="3_qmv3x"]
+[ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
 
-[sub_resource type="Gradient" id="Gradient_oomkl"]
-offsets = PackedFloat32Array(0, 0.52307695, 1)
-colors = PackedColorArray(0.53, 0, 0, 1, 0.38, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_buohc"]
-gradient = SubResource("Gradient_oomkl")
-
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1r4le"]
-panorama = SubResource("GradientTexture2D_buohc")
+panorama = ExtResource("3_qmv3x")
+energy_multiplier = 2.0
 
 [sub_resource type="Sky" id="Sky_jcm6v"]
 sky_material = SubResource("PanoramaSkyMaterial_1r4le")
 
 [sub_resource type="Environment" id="Environment_bk3v5"]
 background_mode = 2
+background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_jcm6v")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
+glow_enabled = true
 
 [node name="Game" type="Node3D" unique_id=848886703 groups=["Game"]]
 script = ExtResource("1_fwxkx")
@@ -52,7 +50,7 @@ near = 1.6
 script = ExtResource("7_oomkl")
 
 [node name="GDView" type="Camera3D" parent="TopView" unique_id=1809593245]
-transform = Transform3D(-1.3696621e-08, 1.127508e-07, 1, 0.5, 0.86602545, -9.0796746e-08, -0.86602545, 0.5, -6.823703e-08, 23.00004, 6.635084, -14.6445675)
+transform = Transform3D(-1.9308949e-08, 1.0422225e-07, 1, 0.59755504, 0.8018278, -7.203012e-08, -0.8018278, 0.59755504, -7.776098e-08, 23.00004, 6.635085, -14.64457)
 projection = 1
 size = 53.37
 
@@ -60,6 +58,7 @@ size = 53.37
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
 [node name="SpeedUp" type="Timer" parent="." unique_id=1930706497]
+wait_time = 100.0
 autostart = true
 ignore_time_scale = true
 

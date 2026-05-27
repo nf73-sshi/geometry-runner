@@ -14,6 +14,10 @@ func _exit_tree() -> void:
 	parent._ChangeHitboxSize(Vector3(2, 2, 2))
 	
 func _physics_process(delta: float) -> void:
+	var process_mat = $trail.process_material as ParticleProcessMaterial
+	process_mat.initial_velocity_min = 0.5 * App.player_speed
+	process_mat.initial_velocity_max = 0.5 * App.player_speed
+	
 	if parent.need_to_jump:
 		if not parent.holding:
 			parent.need_to_jump = false		
@@ -26,6 +30,6 @@ func _physics_process(delta: float) -> void:
 		parent._Kill()
 	else:
 		if parent.velocity.y > 0.0:
-			rotation_degrees.x = angle
+			$Pivot.rotation_degrees.x = angle
 		else:
-			rotation_degrees.x = 90.0 + angle
+			$Pivot.rotation_degrees.x = 90.0 + angle
