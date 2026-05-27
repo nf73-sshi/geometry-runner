@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 			
 	if not $HoldTimer.is_stopped():		
 		if not parent.holding:
+			$HoldTimer.stop()
 			parent.need_to_jump = false		
 		else:
 			parent._Jump(App.player_jump_impulse * 0.6)

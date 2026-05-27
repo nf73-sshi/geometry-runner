@@ -29,7 +29,7 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hs5i3"]
 resource_local_to_scene = true
-size = Vector3(2, 1.7, 2)
+size = Vector3(2.01, 1.65, 2.01)
 
 [node name="Block" type="StaticBody3D" unique_id=1736002682 groups=["Block"]]
 collision_layer = 2

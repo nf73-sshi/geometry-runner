@@ -13,7 +13,7 @@ func _exit_tree() -> void:
 	GameManager.chunk_amount -= 1
 	GameManager._UpdateFarthest()
 	
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	global_position.z -= App.player_speed * delta
 
 func _on_screen_visibility_screen_exited() -> void:

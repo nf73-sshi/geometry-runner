@@ -1,7 +1,5 @@
 class_name Player
-
 extends CharacterBody3D
-signal dead
 
 var noclip : bool = true
 var death_amount : int = 0
@@ -26,7 +24,7 @@ func _Kill():
 	if noclip:
 		return
 	
-	dead.emit()
+	GameManager.player_dead.emit()
 	queue_free()
 
 func _CanJump() -> bool:

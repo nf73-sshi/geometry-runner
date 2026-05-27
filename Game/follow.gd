@@ -6,6 +6,7 @@ var start_pos = Vector3.ZERO
 var stop_follow : bool = false
 
 func _ready() -> void:
+	GameManager.player_dead.connect(_on_player_dead)
 	start_pos = global_position
 	start_dist = abs(global_position.z - get_parent().get_node("Player").global_position.z)
 	start_height = abs(global_position.y - get_parent().get_node("Player").global_position.y)

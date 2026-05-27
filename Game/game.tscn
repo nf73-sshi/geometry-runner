@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
 [ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
-[ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/pause.tscn" id="7_buohc"]
+[ext_resource type="PackedScene" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
 
 [sub_resource type="Gradient" id="Gradient_oomkl"]
@@ -46,7 +46,7 @@ one_shot = true
 ignore_time_scale = true
 
 [node name="TopView" type="Camera3D" parent="." unique_id=14667063]
-transform = Transform3D(-1, -5.3290705e-15, -8.742277e-08, -4.3711385e-08, 0.86602545, 0.5, 7.571034e-08, 0.5, -0.86602545, 0, 14.362839, -20.447062)
+transform = Transform3D(-1, -2.7283035e-15, -8.742276e-08, -5.22705e-08, 0.801567, 0.597905, 7.0075195e-08, 0.597905, -0.801567, 0, 16.0316, -18.868326)
 current = true
 near = 1.6
 script = ExtResource("7_oomkl")
@@ -56,9 +56,12 @@ transform = Transform3D(-1.3696621e-08, 1.127508e-07, 1, 0.5, 0.86602545, -9.079
 projection = 1
 size = 53.37
 
-[node name="Pause" parent="." unique_id=757582669 instance=ExtResource("7_buohc")]
+[node name="Pause" parent="." unique_id=661201130 instance=ExtResource("5_fwxkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
-[connection signal="dead" from="Player" to="." method="_on_player_dead"]
-[connection signal="dead" from="Player" to="TopView" method="_on_player_dead"]
+[node name="SpeedUp" type="Timer" parent="." unique_id=1930706497]
+autostart = true
+ignore_time_scale = true
+
 [connection signal="timeout" from="deadTimer" to="." method="_on_dead_timer_timeout"]
+[connection signal="timeout" from="SpeedUp" to="." method="_on_speed_up_timeout"]

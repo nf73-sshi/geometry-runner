@@ -767,8 +767,7 @@ transform = Transform3D(0.52961427, 0, -1.7763568e-15, 0, 0.52961427, 0, 1.77635
 mesh = SubResource("ArrayMesh_vnaug")
 
 [node name="HoldTimer" type="Timer" parent="." unique_id=805482523]
-wait_time = 0.25
+wait_time = 0.28
 one_shot = true
-ignore_time_scale = true
 
 [connection signal="timeout" from="HoldTimer" to="." method="_on_hold_timer_timeout"]
