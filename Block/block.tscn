@@ -6,7 +6,24 @@
 resource_local_to_scene = true
 size = Vector3(2, 2, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hs5i3"]
+resource_local_to_scene = true
+size = Vector3(2.01, 1.65, 2.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhksi"]
+resource_local_to_scene = true
+render_priority = -1
+cull_mode = 1
+albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
+metallic_specular = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3l32x"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_dhksi")
+size = Vector3(2, 2, 2)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4x3rt"]
+resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0, 0, 0, 1)
 metallic = 1.0
@@ -18,36 +35,17 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_4x3rt")
 size = Vector3(1.9, 1.9, 1.9)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dhksi"]
-cull_mode = 1
-albedo_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
-metallic_specular = 1.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_3l32x"]
-resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_dhksi")
-size = Vector3(2, 2, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hs5i3"]
-resource_local_to_scene = true
-size = Vector3(2.01, 1.65, 2.01)
-
 [node name="Block" type="StaticBody3D" unique_id=1736002682 groups=["Block"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_hs5i3")
-glow = null
+kill = null
+hide_if_near = null
 size = Vector3(2, 2, 2)
 
 [node name="hitbox" type="CollisionShape3D" parent="." unique_id=226259339]
 shape = SubResource("BoxShape3D_p4sgr")
 debug_color = Color(0.30980393, 0.6, 1, 1)
-
-[node name="inside" type="MeshInstance3D" parent="." unique_id=1941818148]
-mesh = SubResource("BoxMesh_4x3rt")
-
-[node name="glow" type="MeshInstance3D" parent="." unique_id=520180693]
-mesh = SubResource("BoxMesh_3l32x")
 
 [node name="killbox" type="Area3D" parent="." unique_id=1299754111]
 collision_layer = 2
@@ -55,5 +53,11 @@ collision_layer = 2
 [node name="hitbox" type="CollisionShape3D" parent="killbox" unique_id=904237641]
 shape = SubResource("BoxShape3D_hs5i3")
 debug_color = Color(1, 0, 0, 1)
+
+[node name="glow" type="MeshInstance3D" parent="." unique_id=520180693]
+mesh = SubResource("BoxMesh_3l32x")
+
+[node name="inside" type="MeshInstance3D" parent="." unique_id=1941818148]
+mesh = SubResource("BoxMesh_4x3rt")
 
 [connection signal="body_entered" from="killbox" to="." method="_on_killbox_body_entered"]

@@ -33,6 +33,7 @@ inner_radius = 0.8
 size = Vector3(3, 4, 2)
 
 [sub_resource type="SphereMesh" id="SphereMesh_4s5ei"]
+resource_local_to_scene = true
 material = ExtResource("2_hgvv3")
 radius = 0.4
 height = 0.8

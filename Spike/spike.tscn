@@ -9,21 +9,6 @@ cull_mode = 2
 albedo_texture = ExtResource("1_d1yd7")
 roughness = 0.69
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wker1"]
-_surfaces = [{
-"aabb": AABB(-1, -1, -1, 2, 2, 2),
-"format": 34896613377,
-"index_count": 186,
-"index_data": PackedByteArray("CQAKAAIACgAJABEAEQAJAAIAEQABAAoACgABAAIAEQAFAAEABQARAAIABQASAAEAAQASAAIABQATABIAEwAFAAIAEwALABIAEgALAAIAEwAMAAsADAATAAIADAAUAAsACwAUAAIADAAVABQAFQAMAAIAFQAGABQAFAAGAAIAFQAAAAYAAAAVAAIAAAAWAAYABgAWAAIAAAAXABYAFwAAAAIAFwAYABYAFgAYAAIAFwAZABgAGQAXAAIAGQANABgAGAANAAIAGQAHAA0ABwAZAAIABwADAA0ADQADAAIABwAaAAMAGgAHAAIAGgAbAAMAAwAbAAIAGgAcABsAHAAaAAIAHAAdABsAGwAdAAIAHAAOAB0ADgAcAAIADgAIAB0AHQAIAAIADgAeAAgAHgAOAAIAHgAfAAgACAAfAAIAHgAEAB8ABAAeAAIABAAgAB8AHwAgAAIABAAQACAAEAAEAAIAIAAPAAIADwAQAAIAEAAPACAA"),
-"lods": [0.028066598, PackedByteArray("CQAKAAIACQABAAoACgABAAIACQAFAAEABQAJAAIABQALAAEAAQALAAIABQAMAAsADAAFAAIADAAGAAsACwAGAAIADAAAAAYAAAAMAAIAAAANAAYABgANAAIAAAAHAA0ABwAAAAIABwADAA0ADQADAAIABwAOAAMADgAHAAIADgAIAAMAAwAIAAIADgAEAAgABAAOAAIACAAPAAIABAAPAAgADwAQAAIAEAAEAAIABAAQAA8A"), 0.15131974, PackedByteArray("BQABAAIABQAGAAEAAQAGAAIABQAAAAYAAAAFAAIAAAADAAYABgADAAIAAAAHAAMABwAAAAIABwAEAAMABAAHAAIAAwAIAAIACAAEAAIABAAIAAMA"), 0.4911312, PackedByteArray("AAABAAIAAQADAAIAAAADAAEAAwAEAAIABAAAAAIAAAAEAAMA")],
-"name": "spike",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 33,
-"vertex_data": PackedByteArray("vgkAAANPAAD7sAAAvgkAAP9/////fwAAQPYAAPuwAAADTwAAQPYAAANPAAC+CQAAQPYAAANPAAB1AgAA+JgAABzHAABs6gAA/38AAAAAAAD4mAAAdQIAAIHaAAB9JQAAfSUAAH0lAACJ/QAA+JgAAH0lAACB2gAA/38AAP//AAAGZwAAif0AAAZnAAB1AgAAHMcAAJIVAADiOAAAkhUAAGzqAADiOAAAkhUAAOI4AACJ/QAABmcAAHUCAAAGZwAA//8AAP9/AAAAAAAA/38AAL4JAAD7sAAAbOoAABzHAACSFQAAHMcAAIHaAACB2gAA4jgAAGzqAAD7sAAAQPYAAPiYAACJ/QAA")
-}]
-blend_shape_mode = 0
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_dohfi"]
 resource_name = "Sketchfab_Scene_Object_11"
 _surfaces = [{
@@ -41,7 +26,6 @@ _surfaces = [{
 "vertex_data": PackedByteArray("vgkAAANP/C37sAAAvgkmCf9/////f3QP+7AAAL4JHBBA9gAA+7DjQv9/////fwMdQPYAAPuwTU0DTwAAQPbAX/9/////fxk9A08AAED23Wa+CQAAA0+9Mf9/////f/81vgkAAANP7yxA9gAA+7DvLPuwAAC+Ce8sA08AAED27ywDTwAAvgl5EkD2AAADT8kqHMcAAGzqcl51AgAA+JghRwNPAAC+Ce8sQPYAAANP7yx1AgAA+JjvLBzHAABs6u8s/38AAAAAiwT4mAAAdQJtAn0lAAB9JVgggdoAAH0lsR2J/QAA+JhwPf9/AAD//6RkBmcAAIn9O2N9JQAAgdrWW/9/AAAAAO8s+JgAAHUC7yyB2gAAfSXvLH0lAAB9Je8sif0AAPiY7yx9JQAAgdrvLP9/AAD//+8sBmcAAIn97ywGZwAAdQKCC+I4AACSFW4ZkhUAAOI4LyccxwAAkhX6FmzqAADiOE0kif0AAAZnIjH//wAA/39aN2zqAAAcx75TgdoAAIHah1n7sAAAQPYoYviYAACJ/U1k4jgAAGzq32GSFQAAHMcvVb4JAAD7sDlOAAAAAP9//T91AgAABmfaOAZnAAB1Au8sHMcAAJIV7yziOAAAkhXvLGzqAADiOO8skhUAAOI47yyJ/QAABmfvLHUCAAAGZ+8s//8AAP9/7ywAAAAA/3/vLL4JAAD7sO8sbOoAABzH7yySFQAAHMfvLIHaAACB2u8s4jgAAGzq7yz7sAAAQPbvLPiYAACJ/e8s0ouZ3M5RCBaNjzi4EJ59B3WzRAIgzkEcBq9RH1bp5sgy6WZSf7lqszWq1tMAvP6hPil90j4pfdI+KX3SPil90puTBNq7Xg0BVsUqI7+tNtQ+KX3SPil90j4pfdI+KX3SiJUg1kJUphXSj9zcxZyYAvSscQAj8m03n/gWw1Kxxsk+KX3SPil90j4pfdI+KX3SPil90j4pfdI+KX3SPil90teUGdjkka/blI1K3RSdMAWanWoAq1qbAfFWJQExtMQfmrvCIH3RaSdB4PctLrR6wIWvys+qrs7SaqzR1LKq39Q+KX3SPil90j4pfdI+KX3SPil90j4pfdI+KX3SPil90j4pfdI+KX3SPil90j4pfdI+KX3SPil90j4pfdI+KX3S")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wker1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrvo0"]
 resource_name = "spike_outline"
@@ -85,15 +69,18 @@ shadow_mesh = SubResource("ArrayMesh_6qxqe")
 [sub_resource type="BoxShape3D" id="BoxShape3D_q5nmf"]
 size = Vector3(0.5, 1, 0.5)
 
-[node name="Spike" type="Node3D" unique_id=1813310228]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dohfi"]
+size = Vector3(1.75, 2, 1.75)
+
+[node name="Spike" type="StaticBody3D" unique_id=2057448669]
+collision_layer = 20
 
 [node name="model" type="Node3D" parent="." unique_id=647950941]
 
 [node name="obj" type="MeshInstance3D" parent="model" unique_id=1136766934]
 mesh = SubResource("ArrayMesh_dohfi")
 
-[node name="glow" type="MeshInstance3D" parent="model" unique_id=2092662253]
-transform = Transform3D(1, 0, 0, 0, 1, -8.5011305e-32, 0, -8.5011305e-32, 1, 0, 0, 0)
+[node name="Object_20" type="MeshInstance3D" parent="model" unique_id=1171805623]
 mesh = SubResource("ArrayMesh_xgsmi")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1874912722]
@@ -103,5 +90,8 @@ script = ExtResource("2_dohfi")
 [node name="hitbox" type="CollisionShape3D" parent="Area3D" unique_id=1200111679]
 shape = SubResource("BoxShape3D_q5nmf")
 debug_color = Color(0.92156863, 0.03529412, 0, 1)
+
+[node name="Hitbox" type="CollisionShape3D" parent="." unique_id=2078096502]
+shape = SubResource("BoxShape3D_dohfi")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

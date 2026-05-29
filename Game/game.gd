@@ -26,3 +26,7 @@ func _on_speed_up_timeout() -> void:
 			Engine.time_scale += 0.025
 		else:
 			Engine.time_scale += 0.05
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	body.hide()
