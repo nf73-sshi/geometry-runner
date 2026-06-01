@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	if stop_follow:
 		return
 
-	var current_height = App.player.global_position.y - start_pos.y + 3.0
+	var current_height = App.player.global_position.y - start_pos.y
 	if current_height < 0:
 		current_height = 0
 		

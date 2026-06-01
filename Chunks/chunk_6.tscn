@@ -13,13 +13,10 @@
 aabb = AABB(-10, -2, -100, 20, 8, 200)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_n1mif")]
-kill = false
 size = Vector3(10, 4, 200)
 
 [node name="Base2" parent="." index="2" unique_id=721737365 instance=ExtResource("2_n1mif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
-kill = false
-glow = false
 size = Vector3(10, 4, 200)
 
 [node name="Portal" parent="." index="3" unique_id=1868742556 instance=ExtResource("3_fmmdv")]
@@ -97,6 +94,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -43)
 script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar" index="0" unique_id=1891880807 instance=ExtResource("2_n1mif")]
+collision_layer = 18
 kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)

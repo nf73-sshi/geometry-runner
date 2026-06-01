@@ -249,7 +249,7 @@ linear_accel_min = -2.2351742e-06
 linear_accel_max = -2.2351742e-06
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xs3ee"]
-albedo_color = Color(4.8687005, 3.3496332, 0, 1)
+albedo_color = Color(3.2944162, 2.2610493, 0, 1)
 metallic_specular = 1.0
 emission_enabled = true
 emission = Color(1, 0, 0, 1)
@@ -292,7 +292,7 @@ mesh = SubResource("ArrayMesh_c56ng")
 
 [node name="trail" type="GPUParticles3D" parent="Pivot" unique_id=602474045]
 transform = Transform3D(1.1920929e-07, 0, 1, 0, 1, 0, -1, 0, 1.1920929e-07, -0.3, 0.3028127, -0.02777344)
-amount = 100
+amount = 75
 process_material = SubResource("ParticleProcessMaterial_yhveh")
 draw_passes = 2
 draw_pass_2 = SubResource("BoxMesh_a3h6d")

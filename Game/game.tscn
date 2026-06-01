@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
-[ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
 [ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="3_qmv3x"]
 [ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
 [ext_resource type="FontFile" uid="uid://bc7gxxylg7hnn" path="res://Assets/Fonts/PUSAB___.otf" id="7_buohc"]
+[ext_resource type="Script" uid="uid://dva354lnf8h4r" path="res://Game/UI/score.gd" id="7_kul4i"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
 [ext_resource type="Script" uid="uid://dts3j4eb2oc46" path="res://Game/UI/time_elapsed.gd" id="8_buohc"]
 
@@ -48,6 +48,7 @@ script = ExtResource("1_fwxkx")
 
 [node name="Player" parent="." unique_id=404199503 instance=ExtResource("1_bk3v5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -13)
+input_ray_pickable = false
 
 [node name="FPSView" type="Camera3D" parent="Player" unique_id=1852386724]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0.030148506, 0.9121618)
@@ -56,9 +57,6 @@ near = 1.0
 
 [node name="world" type="WorldEnvironment" parent="." unique_id=141869575]
 environment = SubResource("Environment_bk3v5")
-
-[node name="thorn and cursed thorn" parent="." unique_id=1426107567 instance=ExtResource("3_7raqb")]
-transform = Transform3D(-0.9998387, 0, 0.017958561, 0, 1, 0, -0.017958561, 0, -0.9998387, -25.368998, 9.120831, 123.925964)
 
 [node name="deadTimer" type="Timer" parent="." unique_id=1441579405]
 one_shot = true
@@ -117,6 +115,7 @@ text = "Score
 label_settings = SubResource("LabelSettings_kul4i")
 horizontal_alignment = 1
 autowrap_mode = 1
+script = ExtResource("7_kul4i")
 
 [node name="TR" type="Control" parent="CanvasLayer" unique_id=742080052]
 layout_mode = 3

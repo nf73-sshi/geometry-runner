@@ -38,7 +38,10 @@ func _ChangeHitboxSize(size):
 
 func _Jump(intensity):	
 	velocity.y = App.gravity_scale * intensity
-	
+
+func _AddJump(intensity):
+	velocity.y += App.gravity_scale * intensity
+
 func _Handle_swipe(direction):
 	if abs(direction.x) > abs(direction.y):
 		if direction.x > 0:

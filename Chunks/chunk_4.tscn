@@ -12,7 +12,6 @@
 aabb = AABB(-10, -2, -75, 20, 8, 150)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_l1a4u")]
-kill = false
 size = Vector3(10, 4, 120)
 
 [node name="Base2" parent="." index="2" unique_id=120891244 instance=ExtResource("2_l1a4u")]

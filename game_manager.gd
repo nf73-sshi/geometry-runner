@@ -8,7 +8,7 @@ const min_dist_to_spawn = 300.0
 
 var all_chunks : Array
 var current_chunks : Array
-var test_chunk = null #preload("res://Chunks/chunk_6.tscn")
+var test_chunk = null #preload("res://Chunks/chunk_2.tscn")
 
 var score : int = 0
 

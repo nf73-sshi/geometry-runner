@@ -10,12 +10,13 @@ func _OnProcess(delta : float):
 func _OnTrigger(player: Player):
 	pass
 
-func _Trigger(player):
-	if used:
+func _Trigger(player: Player):
+	if multi_trigger:
 		return
 		
-	if not multi_trigger:
+	if not used:
 		used = true
+		player.holding = false
 		player.need_to_jump = false
 		player.need_to_trigger_interact = false
 		_OnTrigger(player)
