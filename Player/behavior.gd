@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody3D
 
-var noclip : bool = true
+var noclip : bool = false
 var death_amount : int = 0
 
 enum INPUT {LEFT, JUMP, RIGHT}
@@ -19,9 +19,9 @@ var middle_screen_x : float = 0.0
 		
 func _Kill():
 	death_amount += 1
-	print("You died : %d" % death_amount)
 	
 	if noclip:
+		print("Deaths : %d" % death_amount)
 		return
 	
 	GameManager.player_dead.emit()
@@ -85,7 +85,7 @@ func _physics_process(delta):
 
 	_KeyboardInputs()
 
-	var cible_x : float = start_pos.x - (current_lane * 2.5)
+	var cible_x : float = start_pos.x - (current_lane * 3.0)
 	global_position.x = move_toward(global_position.x, cible_x, App.player_speed * 2.0 * delta)
 	
 	if not App.player_ignore_gravity:

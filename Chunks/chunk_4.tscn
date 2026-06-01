@@ -9,7 +9,7 @@
 [node name="Chunk4" unique_id=661201130 instance=ExtResource("1_6jx6e")]
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-5, -2, -60, 10, 4, 150)
+aabb = AABB(-10, -2, -75, 20, 8, 150)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_l1a4u")]
 kill = false

@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bkswcmjmi8uok" path="res://Assets/Monsters/thorn and cursed thorn.glb" id="3_7raqb"]
 [ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="3_qmv3x"]
 [ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
+[ext_resource type="FontFile" uid="uid://bc7gxxylg7hnn" path="res://Assets/Fonts/PUSAB___.otf" id="7_buohc"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
+[ext_resource type="Script" uid="uid://dts3j4eb2oc46" path="res://Game/UI/time_elapsed.gd" id="8_buohc"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1r4le"]
 panorama = ExtResource("3_qmv3x")
@@ -25,6 +27,21 @@ glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmv3x"]
 size = Vector3(20, 10, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kul4i"]
+line_spacing = 20.0
+font = ExtResource("7_buohc")
+font_size = 64
+font_color = Color(1, 1, 0, 1)
+outline_size = 20
+outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oomkl"]
+line_spacing = 10.0
+font = ExtResource("7_buohc")
+font_size = 30
+outline_size = 10
+outline_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="Game" type="Node3D" unique_id=848886703 groups=["Game"]]
 script = ExtResource("1_fwxkx")
@@ -73,9 +90,55 @@ debug_color = Color(0, 1, 0.69803923, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
 [node name="SpeedUp" type="Timer" parent="." unique_id=1930706497]
-wait_time = 100.0
+wait_time = 10.0
 autostart = true
 ignore_time_scale = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=138647093]
+
+[node name="TM" type="Control" parent="CanvasLayer" unique_id=694085341]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="txt" type="Label" parent="CanvasLayer/TM" unique_id=1344221388]
+layout_mode = 1
+offset_left = -238.0
+offset_top = 20.0
+offset_right = 283.0
+offset_bottom = 122.0
+text = "Score
+0"
+label_settings = SubResource("LabelSettings_kul4i")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="TR" type="Control" parent="CanvasLayer" unique_id=742080052]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="txt" type="Label" parent="CanvasLayer/TR" unique_id=2031241565]
+layout_mode = 0
+offset_left = -188.0
+offset_top = 11.0
+offset_right = 30.0
+offset_bottom = 84.0
+text = "Time
+00h 00m 00s"
+label_settings = SubResource("LabelSettings_oomkl")
+horizontal_alignment = 1
+autowrap_mode = 1
+script = ExtResource("8_buohc")
 
 [connection signal="timeout" from="deadTimer" to="." method="_on_dead_timer_timeout"]
 [connection signal="body_entered" from="TopView/Area3D" to="." method="_on_area_3d_body_entered"]

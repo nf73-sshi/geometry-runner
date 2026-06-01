@@ -25,6 +25,7 @@ GameManager="*uid://bya0mbksfr02x"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
@@ -41,6 +42,7 @@ Block="walkable"
 GameMode=""
 Chunk=""
 Game=""
+Player=""
 
 [input]
 
@@ -86,6 +88,7 @@ pointing/emulate_touch_from_mouse=true
 
 common/physics_ticks_per_second=120
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

@@ -30,7 +30,7 @@ flip_faces = true
 inner_radius = 0.8
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oixwc"]
-size = Vector3(3, 4, 2)
+size = Vector3(4, 5.5, 2)
 
 [sub_resource type="SphereMesh" id="SphereMesh_4s5ei"]
 resource_local_to_scene = true

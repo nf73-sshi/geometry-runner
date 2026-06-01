@@ -1,12 +1,16 @@
 extends Node
 
 signal player_dead
+
 var chunk_amount : int = 0
 var farthest_z : float = 0.0
 const min_dist_to_spawn = 300.0
 
 var all_chunks : Array
-var test_chunk = null #preload("res://Chunks/chunk_5.tscn")
+var current_chunks : Array
+var test_chunk = null #preload("res://Chunks/chunk_6.tscn")
+
+var score : int = 0
 
 func _InitChunks():
 	var path = "res://Chunks/"
@@ -33,17 +37,18 @@ func _SpawnChunk():
 	if game == null:
 		return
 
-	if all_chunks.is_empty():
-		return
-				
-	var i = randi() % all_chunks.size()
+	if current_chunks.is_empty():
+		current_chunks.append_array(all_chunks)
+		
+	var i = randi() % current_chunks.size()
 	var c : Chunk = null
 	
 	if test_chunk == null:
-		c = all_chunks[i].instantiate() as Chunk
+		c = current_chunks[i].instantiate() as Chunk
+		current_chunks.remove_at(i)
 	else:
 		c = test_chunk.instantiate()
-		
+	
 	game.add_child(c)
 	c.global_position.z = farthest_z + c.size_z * 0.5
 
@@ -57,12 +62,13 @@ func _UpdateFarthest():
 		if current_z > farthest_z:
 			farthest_z = current_z
 
-func _on_reset():
+func Reset():
+	score = 0
+	current_chunks.clear()
 	pass
 		
 func _ready() -> void:
 	_InitChunks()
-	App.on_reset.connect(_on_reset)
 	pass
 	
 func _physics_process(delta: float) -> void:

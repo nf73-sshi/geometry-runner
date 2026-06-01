@@ -6,7 +6,8 @@
 [node name="Pause" unique_id=661201130 instance=ExtResource("1_7arhd")]
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-5, -2, -10, 10, 4, 30)
+aabb = AABB(-10, -2, -10, 20, 8, 30)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_gnh4v")]
+kill = false
 size = Vector3(10, 4, 20)

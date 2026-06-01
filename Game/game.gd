@@ -4,6 +4,7 @@ func _ready() -> void:
 	GameManager.player_dead.connect(_on_player_dead)
 	Engine.time_scale = 1.25
 	App._Reset()
+	GameManager.Reset()
 	App.player = $Player
 	
 func _on_player_dead() -> void:

@@ -10,7 +10,7 @@
 script = ExtResource("2_n6p3p")
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-5, -2, -25, 10, 4, 75)
+aabb = AABB(-10, -2, -37.5, 20, 8, 75)
 
 [node name="Double2" parent="." index="1" unique_id=907329709 instance=ExtResource("1_bqhpl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 2)

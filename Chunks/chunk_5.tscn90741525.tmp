@@ -9,7 +9,8 @@
 [node name="Chunk5" unique_id=661201130 instance=ExtResource("1_j14k0")]
 
 [node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
-aabb = AABB(-10, -2, -90, 20, 8, 180)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+aabb = AABB(-5, -2, -60, 10, 4, 180)
 
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_13h21")]
 kill = false

@@ -2,6 +2,8 @@ extends Node
 
 signal on_reset
 
+static var bloc_mat = StandardMaterial3D.new()
+
 #Gamemodes
 enum GAMEMODE {Cube, Ship, Ball, Ufo, Wave, Robot, Spider, Swing}
 var current_game_mode : GAMEMODE = GAMEMODE.Cube
@@ -70,7 +72,10 @@ func _ReverseGravity():
 	gravity_scale *= -1.0
 
 func _ready() -> void:
-	pass
-
+		bloc_mat.roughness = 1.0
+		bloc_mat.metalness = 1.0
+		bloc_mat.specular = 1.0
+		bloc_mat.albedo_color = Color(0.2, 0, 0, 1)
+		
 func _process(delta: float) -> void:
 	pass

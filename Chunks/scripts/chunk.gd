@@ -10,7 +10,6 @@ func _ready() -> void:
 	_Start()
 
 func _exit_tree() -> void:
-	print("supprimed")
 	GameManager.chunk_amount -= 1
 	GameManager._UpdateFarthest()
 	
