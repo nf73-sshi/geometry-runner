@@ -10,16 +10,18 @@ config_version=5
 
 [application]
 
-config/name="Geometry Runner"
+config/name="Geometry Run"
+config/description="A Subway Surfer version of Geometry Dash"
+config/version="WIP"
 run/main_scene="uid://bkc1r2a6wkn8k"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://ck7b6x8vy15am"
 
 [autoload]
 
 ActionButtonAudio="*uid://dqc44ymqkgy64"
 App="*uid://k5ce24fu8jgp"
-GameManager="*uid://bya0mbksfr02x"
+GameManager="*uid://1iaklkgi4w50"
 
 [display]
 
@@ -27,6 +29,7 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/mode=2
 window/stretch/mode="canvas_items"
+window/handheld/orientation=1
 
 [editor_plugins]
 

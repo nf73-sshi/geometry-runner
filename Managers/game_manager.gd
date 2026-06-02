@@ -6,29 +6,11 @@ var chunk_amount : int = 0
 var farthest_z : float = 0.0
 const min_dist_to_spawn = 300.0
 
-var all_chunks : Array
+@export var all_chunks : Array[PackedScene] = []
 var current_chunks : Array
-var test_chunk = null #preload("res://Chunks/chunk_2.tscn")
+var test_chunk = preload("res://Chunks/chunk_5.tscn")
 
 var score : int = 0
-
-func _InitChunks():
-	var path = "res://Chunks/"
-	var dir = DirAccess.open(path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name = dir.get_next()
-		while file_name != "":
-			if not dir.current_is_dir():
-				if file_name.contains("chunk_") and file_name.ends_with("tscn"):
-					print("Found Chunk : " + file_name)
-					all_chunks.append(load(path + file_name))
-				
-			file_name = dir.get_next()
-			
-		dir.list_dir_end()
-	else:
-		print("An error occurred when trying to access the path.")
 
 func _SpawnChunk():
 	_UpdateFarthest()
@@ -66,11 +48,10 @@ func Reset():
 	score = 0
 	current_chunks.clear()
 	pass
-		
+
 func _ready() -> void:
-	_InitChunks()
-	pass
-	
+	for c in all_chunks:
+		print(c)
 func _physics_process(delta: float) -> void:
 	if farthest_z < min_dist_to_spawn:
 		_SpawnChunk()

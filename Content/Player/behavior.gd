@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody3D
 
+var first_index = 0
+
 var noclip : bool = false
 var death_amount : int = 0
 
@@ -86,8 +88,10 @@ func _ready() -> void:
 	pass 
 
 func _physics_process(delta):
+	#print("hold = ", holding)
+	
 	velocity.x = 0.0
-	if global_position.y < -50.0:
+	if global_position.y < -50.0 or global_position.y > 500.0:
 		_Kill()
 		return
 
@@ -102,25 +106,31 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
+	var try_holding = false
+	var current_index = -1
+	
 	if event is InputEventScreenTouch:
+		first_index = event.index
+		current_index = 0
 		if event.is_pressed():
 			touch_start_pos = event.position
 			swipe_triggered = false
 			holding = true
 			
-			if event.position.x > middle_screen_x:
+			if event.position.x > middle_screen_x * 1.2:
 				_ApplyInput(INPUT.JUMP)
 		else:
-			holding = false
 			need_to_trigger_interact = false
 			need_to_jump = false
-	
+			holding = false
+			try_holding = true
+			
 	if event is InputEventScreenDrag and not swipe_triggered:
+		if try_holding:
+			event.
 		var current_vector = event.position - touch_start_pos	
-		if event.position.x > middle_screen_x:
-			return
-		
-		if current_vector.length() > 30.0:
-			var direction = current_vector.normalized()
-			_Handle_swipe(direction)		
-			swipe_triggered = true
+		if event.position.x < middle_screen_x * 1.2:
+			if current_vector.length() > 20.0:
+				var direction = current_vector.normalized()
+				_Handle_swipe(direction)		
+				swipe_triggered = true

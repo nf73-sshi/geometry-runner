@@ -41,7 +41,7 @@ func _ChangeGameMode(mode : GAMEMODE):
 		return
 	
 	current_game_mode = mode
-	player.velocity.y *= 0.5
+	player.velocity.y *= 0.75
 	
 	for child in player.get_children():
 		if child.is_in_group("GameMode"):
