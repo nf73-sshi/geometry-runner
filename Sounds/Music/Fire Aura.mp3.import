@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7a472cx3bo1n"
+path="res://.godot/imported/Fire Aura.mp3-f7989a0606493da10a91b120b9361dd3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/Fire Aura.mp3"
+dest_files=["res://.godot/imported/Fire Aura.mp3-f7989a0606493da10a91b120b9361dd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

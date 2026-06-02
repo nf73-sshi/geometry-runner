@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dkjkns6hsvlp1" path="res://Menu/Buttons/play.png" id="2_raj00"]
 [ext_resource type="Script" uid="uid://di11q0mhb4hdo" path="res://addons/action_button/action_button.gd" id="3_8w4re"]
 [ext_resource type="Script" uid="uid://bbmr3yytorn4r" path="res://addons/action_button/action_button_effect.gd" id="4_8w4re"]
+[ext_resource type="AudioStream" uid="uid://ccr7rfx37rj12" path="res://Sounds/Music/Main Theme.mp3" id="7_eafcm"]
 
 [sub_resource type="Resource" id="Resource_ofseh"]
 script = ExtResource("4_8w4re")
@@ -74,5 +75,9 @@ icon_alignment = 1
 script = ExtResource("3_8w4re")
 on_button_down = SubResource("Resource_ofseh")
 metadata/_custom_type_script = "uid://di11q0mhb4hdo"
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=1274320130]
+stream = ExtResource("7_eafcm")
+autoplay = true
 
 [connection signal="pressed" from="UI/Buttons/play" to="." method="_on_play_pressed"]

@@ -23,7 +23,11 @@ func _Kill():
 	if noclip:
 		print("Deaths : %d" % death_amount)
 		return
-	
+		
+	$DeathEffect.emitting = true
+	$DeathEffect.finished.connect($DeathEffect.queue_free)
+	$DeathEffect.reparent(get_tree().current_scene)
+
 	GameManager.player_dead.emit()
 	queue_free()
 
@@ -76,6 +80,7 @@ func _ApplyInput(i) :
 			need_to_trigger_interact = true
 
 func _ready() -> void:
+	$DeathEffect.emitting = false
 	start_pos = global_position
 	middle_screen_x = get_viewport().get_visible_rect().size.x / 2.0
 	pass 

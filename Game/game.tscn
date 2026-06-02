@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ct6lytkbycpod"]
 
-[ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Player/player.tscn" id="1_bk3v5"]
+[ext_resource type="PackedScene" uid="uid://cprchu81l4nwd" path="res://Content/Player/player.tscn" id="1_bk3v5"]
 [ext_resource type="Script" uid="uid://dxxy4ovsymnea" path="res://Game/game.gd" id="1_fwxkx"]
 [ext_resource type="Texture2D" uid="uid://lvs10ejcglus" path="res://Menu/background/bg.jpg" id="3_qmv3x"]
 [ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/chunk_pause.tscn" id="5_fwxkx"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://dva354lnf8h4r" path="res://Game/UI/score.gd" id="7_kul4i"]
 [ext_resource type="Script" uid="uid://bpgjxdkuc0wce" path="res://Game/follow.gd" id="7_oomkl"]
 [ext_resource type="Script" uid="uid://dts3j4eb2oc46" path="res://Game/UI/time_elapsed.gd" id="8_buohc"]
+[ext_resource type="AudioStream" uid="uid://cfxgh7so34gcf" path="res://Sounds/Music/Every End.mp3" id="9_kul4i"]
+[ext_resource type="AudioStream" uid="uid://fped6yiga4x" path="res://Sounds/Sfx/die.ogg" id="10_7gi1t"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1r4le"]
 panorama = ExtResource("3_qmv3x")
@@ -138,6 +140,14 @@ label_settings = SubResource("LabelSettings_oomkl")
 horizontal_alignment = 1
 autowrap_mode = 1
 script = ExtResource("8_buohc")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=404333589]
+stream = ExtResource("9_kul4i")
+autoplay = true
+parameters/looping = true
+
+[node name="die" type="AudioStreamPlayer" parent="." unique_id=82614482]
+stream = ExtResource("10_7gi1t")
 
 [connection signal="timeout" from="deadTimer" to="." method="_on_dead_timer_timeout"]
 [connection signal="body_entered" from="TopView/Area3D" to="." method="_on_area_3d_body_entered"]

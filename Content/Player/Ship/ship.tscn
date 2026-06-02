@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dlg8mttatnojc"]
 
-[ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Player/rotate_pivot.gd" id="1_ci6by"]
-[ext_resource type="Script" uid="uid://bc6bewowmca5m" path="res://Player/Ship/ship.gd" id="1_yhveh"]
+[ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Content/Player/rotate_pivot.gd" id="1_ci6by"]
+[ext_resource type="Script" uid="uid://bc6bewowmca5m" path="res://Content/Player/Ship/ship.gd" id="1_yhveh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr3te"]
 resource_name = "Black"

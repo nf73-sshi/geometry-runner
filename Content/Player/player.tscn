@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cprchu81l4nwd"]
 
-[ext_resource type="Script" uid="uid://bysm0bo0smcmh" path="res://Player/behavior.gd" id="2_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://c71d8aj85xrx2" path="res://Player/Cube/cube.tscn" id="2_btcbx"]
+[ext_resource type="Script" uid="uid://bysm0bo0smcmh" path="res://Content/Player/behavior.gd" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://c71d8aj85xrx2" path="res://Content/Player/Cube/cube.tscn" id="2_btcbx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ntmi"]
 size = Vector3(2, 2, 2)
@@ -24,6 +24,22 @@ _data = {
 &"swipe_right": SubResource("Animation_k53q1")
 }
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kbsyd"]
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+spread = 180.0
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+gravity = Vector3(0, 0, 0)
+damping_max = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbsyd"]
+albedo_color = Color(0, 2.1168277, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x8iml"]
+material = SubResource("StandardMaterial3D_kbsyd")
+size = Vector3(0.15, 0.15, 0.15)
+
 [node name="Player" type="CharacterBody3D" unique_id=404199503 groups=["Player"]]
 transform = Transform3D(0.005113774, 0, 0.99998695, 0, 1, 0, -0.99998695, 0, 0.005113774, 0, 0, 0)
 collision_mask = 2
@@ -37,3 +53,13 @@ libraries/ = SubResource("AnimationLibrary_k53q1")
 speed_scale = 2.0
 
 [node name="Cube" parent="." unique_id=465939523 instance=ExtResource("2_btcbx")]
+
+[node name="DeathEffect" type="GPUParticles3D" parent="." unique_id=1768228174]
+emitting = false
+amount = 200
+lifetime = 2.5
+one_shot = true
+speed_scale = 6.0
+explosiveness = 0.5
+process_material = SubResource("ParticleProcessMaterial_kbsyd")
+draw_pass_1 = SubResource("BoxMesh_x8iml")

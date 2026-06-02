@@ -7,12 +7,12 @@ static var bloc_mat = StandardMaterial3D.new()
 #Gamemodes
 enum GAMEMODE {Cube, Ship, Ball, Ufo, Wave, Robot, Spider, Swing}
 var current_game_mode : GAMEMODE = GAMEMODE.Cube
-var cube = preload("res://Player/Cube/cube.tscn")
-var ship = preload("res://Player/Ship/ship.tscn")
-var ball = preload("res://Player/Ball/ball.tscn")
-var ufo = preload("res://Player/Ufo/ufo.tscn")
-var wave = preload("res://Player/Wave/wave.tscn")
-var robot = preload("res://Player/Robot/robot.tscn")
+var cube = preload("res://Content/Player/Cube/cube.tscn")
+var ship = preload("res://Content/Player/Ship/ship.tscn")
+var ball = preload("res://Content/Player/Ball/ball.tscn")
+var ufo = preload("res://Content/Player/Ufo/ufo.tscn")
+var wave = preload("res://Content/Player/Wave/wave.tscn")
+var robot = preload("res://Content/Player/Robot/robot.tscn")
 
 #Player
 var player_ignore_gravity : bool = false

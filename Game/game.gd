@@ -1,6 +1,7 @@
 extends Node3D
 
 func _ready() -> void:
+	$music.play()
 	GameManager.player_dead.connect(_on_player_dead)
 	Engine.time_scale = 1.25
 	App._Reset()
@@ -8,6 +9,8 @@ func _ready() -> void:
 	App.player = $Player
 	
 func _on_player_dead() -> void:
+	$die.play()
+	$music.stop()
 	App.player_speed = 0.0
 	App.player = null
 	$deadTimer.start()

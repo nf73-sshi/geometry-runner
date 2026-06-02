@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ckgxr5dxpvxw7"]
 
 [ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_6jx6e"]
-[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_l1a4u"]
-[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Portal/portal.tscn" id="3_l1a4u"]
-[ext_resource type="PackedScene" uid="uid://nh3tyb5f88v6" path="res://Pads/Red/red_pad.tscn" id="5_2ur20"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_l1a4u"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_l1a4u"]
+[ext_resource type="PackedScene" uid="uid://nh3tyb5f88v6" path="res://Content/Pads/Red/red_pad.tscn" id="5_2ur20"]
 [ext_resource type="Script" uid="uid://btvee62dppw4q" path="res://Chunks/scripts/Chunk4/chunk4_pillar.gd" id="6_2ur20"]
 
 [node name="Chunk4" unique_id=661201130 instance=ExtResource("1_6jx6e")]
@@ -17,7 +17,6 @@ size = Vector3(10, 4, 120)
 [node name="Base2" parent="." index="2" unique_id=120891244 instance=ExtResource("2_l1a4u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 kill = true
-glow = false
 size = Vector3(10, 4, 120)
 
 [node name="Portal2" parent="." index="3" unique_id=1868742556 instance=ExtResource("3_l1a4u")]
