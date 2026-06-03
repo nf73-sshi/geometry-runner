@@ -1,7 +1,8 @@
 class_name Player
 extends CharacterBody3D
 
-var first_index = 0
+var jump_index = -1
+var swipe_index = -1
 
 var noclip : bool = false
 var death_amount : int = 0
@@ -106,30 +107,31 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
-	var try_holding = false
-	var current_index = -1
-	
 	if event is InputEventScreenTouch:
-		first_index = event.index
-		current_index = 0
-		if event.is_pressed():
-			touch_start_pos = event.position
-			swipe_triggered = false
-			holding = true
-			
-			if event.position.x > middle_screen_x * 1.2:
+		if event.is_pressed():			
+			if event.position.x > middle_screen_x and jump_index == -1:
 				_ApplyInput(INPUT.JUMP)
+				jump_index = event.index
+				holding = true
+			elif event.position.x < middle_screen_x and swipe_index == -1:					
+				touch_start_pos = event.position
+				swipe_index = event.index
+				swipe_triggered = false
 		else:
-			need_to_trigger_interact = false
-			need_to_jump = false
-			holding = false
-			try_holding = true
-			
+			if event.index == jump_index:
+				jump_index = -1
+				need_to_trigger_interact = false
+				need_to_jump = false
+				holding = false
+			elif event.index == swipe_index:
+				swipe_index = -1
+				
 	if event is InputEventScreenDrag and not swipe_triggered:
-		if try_holding:
-			event.
+		if event.index != swipe_index:
+			return
+			
 		var current_vector = event.position - touch_start_pos	
-		if event.position.x < middle_screen_x * 1.2:
+		if event.position.x < middle_screen_x:
 			if current_vector.length() > 20.0:
 				var direction = current_vector.normalized()
 				_Handle_swipe(direction)		

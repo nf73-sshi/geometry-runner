@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Geometry Run"
 config/description="A Subway Surfer version of Geometry Dash"
-config/version="WIP"
+config/version="1.0.0"
 run/main_scene="uid://bkc1r2a6wkn8k"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://ck7b6x8vy15am"
