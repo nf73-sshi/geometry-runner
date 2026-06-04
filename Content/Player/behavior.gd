@@ -89,9 +89,9 @@ func _ready() -> void:
 	pass 
 
 func _physics_process(delta):
-	#print("hold = ", holding)
-	
 	velocity.x = 0.0
+	velocity.z = 0.0
+	
 	if global_position.y < -50.0 or global_position.y > 500.0:
 		_Kill()
 		return

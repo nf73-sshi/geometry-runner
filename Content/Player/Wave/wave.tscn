@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c45i5l48fhns8"]
 
-[ext_resource type="Script" uid="uid://dx24l66papplm" path="res://Player/Wave/wave.gd" id="1_4qmyd"]
+[ext_resource type="Script" uid="uid://dx24l66papplm" path="res://Content/Player/Wave/wave.gd" id="1_4qmyd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmy3n"]
 resource_name = "Green"
@@ -98,7 +98,9 @@ initial_velocity_max = 50.0
 gravity = Vector3(0, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vxs3"]
-albedo_color = Color(0, 2.454227, 0, 1)
+transparency = 1
+albedo_color = Color(0, 18.892157, 0, 0.003921569)
+proximity_fade_distance = 5.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_4qmyd"]
 material = SubResource("StandardMaterial3D_3vxs3")

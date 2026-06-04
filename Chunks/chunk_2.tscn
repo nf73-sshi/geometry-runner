@@ -190,15 +190,6 @@ transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.9
 [node name="Spike40" parent="Range" index="38" unique_id=1494380227 instance=ExtResource("1_bqhpl")]
 transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, -3, 3, 27.083508)
 
-[node name="Spike41" parent="Range" index="39" unique_id=548065643 instance=ExtResource("1_bqhpl")]
-transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 3, 3, 30.083508)
-
-[node name="Spike42" parent="Range" index="40" unique_id=390102877 instance=ExtResource("1_bqhpl")]
-transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, 0, 3, 30.083508)
-
-[node name="Spike43" parent="Range" index="41" unique_id=463971156 instance=ExtResource("1_bqhpl")]
-transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.99981344, -0.017740618, -0.0016222363, 0.017753504, 0.9998411, -3, 3, 30.083508)
-
 [node name="bloc" type="Node3D" parent="." index="12" unique_id=1444693342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 script = ExtResource("6_3dfv2")
@@ -214,7 +205,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 script = ExtResource("6_3dfv2")
 
 [node name="Block4" parent="bloc2" index="0" unique_id=165378212 instance=ExtResource("2_g5xic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 14.1)
 
 [node name="YellowPad2" parent="bloc2/Block4" index="4" unique_id=1963404679 instance=ExtResource("4_dsoga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -224,7 +215,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 script = ExtResource("6_3dfv2")
 
 [node name="Block6" parent="bloc3" index="0" unique_id=48513472 instance=ExtResource("2_g5xic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 25.1)
 
 [node name="YellowPad" parent="bloc3/Block6" index="4" unique_id=1509631305 instance=ExtResource("4_dsoga")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
