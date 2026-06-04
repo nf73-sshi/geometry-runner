@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lyuqjpuak61v"]
+
+[ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_n7xdi"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_4gckm"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_sq42l"]
+
+[node name="Chunk7" unique_id=661201130 instance=ExtResource("1_n7xdi")]
+
+[node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
+aabb = AABB(-10, -4, -85, 20, 8, 170)
+
+[node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_4gckm")]
+size = Vector3(10, 4, 150)
+
+[node name="Portal" parent="." index="2" unique_id=1868742556 instance=ExtResource("3_sq42l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 5.9523773, -66)
+gameMode = 3

@@ -10,7 +10,11 @@ func _physics_process(delta: float) -> void:
 	if parent.need_to_jump:
 		parent.need_to_jump = false		
 		parent._Jump(34.0)
-
+		
+		$AnimationPlayer.play('RESET')
+		$AnimationPlayer.advance(0)
+		$AnimationPlayer.play('jump')
+	
 	if App.gravity_scale > 0.0:
 		rotation_degrees.z = 0.0
 	else:

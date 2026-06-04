@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dd0ocwxpu0fa" path="res://Chunks/chunk_5.tscn" id="5_t6cvd"]
 [ext_resource type="PackedScene" uid="uid://bmge44wivssxk" path="res://Chunks/chunk_6.tscn" id="6_yrcls"]
 [ext_resource type="PackedScene" uid="uid://c07tbh2whp32s" path="res://Chunks/chunk_pause.tscn" id="7_82qcq"]
+[ext_resource type="PackedScene" uid="uid://lyuqjpuak61v" path="res://Chunks/chunk_7.tscn" id="8_72e81"]
 
 [node name="GameManager" type="Node3D" unique_id=1982038016]
 script = ExtResource("1_hx1bj")
-all_chunks = [ExtResource("2_3xwa6"), ExtResource("3_72e81"), ExtResource("4_sdwyg"), ExtResource("5_t6cvd"), ExtResource("6_yrcls"), ExtResource("7_82qcq")]
+all_chunks = Array[PackedScene]([ExtResource("2_3xwa6"), ExtResource("3_72e81"), ExtResource("4_sdwyg"), ExtResource("5_t6cvd"), ExtResource("6_yrcls"), ExtResource("7_82qcq"), ExtResource("8_72e81")])

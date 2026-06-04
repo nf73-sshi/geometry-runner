@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bmge44wivssxk"]
 
 [ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_o7e4u"]
-[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_n1mif"]
-[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Portal/portal.tscn" id="3_fmmdv"]
-[ext_resource type="PackedScene" uid="uid://igmivtvt5pb0" path="res://Gravity Portal/gravity_portal.tscn" id="4_p26ah"]
-[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="5_m4j3r"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_n1mif"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_fmmdv"]
+[ext_resource type="PackedScene" uid="uid://igmivtvt5pb0" path="res://Content/Gravity Portal/gravity_portal.tscn" id="4_p26ah"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Content/Spike/spike.tscn" id="5_m4j3r"]
 [ext_resource type="Script" uid="uid://1dcc8j0k6p4l" path="res://Chunks/scripts/Chunk6/chunk_6_behavior.gd" id="6_s607j"]
 
 [node name="Chunk6" unique_id=661201130 instance=ExtResource("1_o7e4u")]

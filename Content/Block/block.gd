@@ -27,7 +27,9 @@ func update_size():
 	else:
 		$killbox/hitbox.shape.size = size
 		$glow.get_active_material(0).albedo_color = Color.RED
-		$inside.set_surface_override_material(0, App.bloc_mat)
+		
+		if not Engine.is_editor_hint():
+			$inside.set_surface_override_material(0, App.bloc_mat)
 
 func update_others():
 	if not glow:

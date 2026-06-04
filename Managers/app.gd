@@ -41,7 +41,6 @@ func _ChangeGameMode(mode : GAMEMODE):
 		return
 	
 	current_game_mode = mode
-	player.velocity.y *= 0.75
 	
 	for child in player.get_children():
 		if child.is_in_group("GameMode"):
@@ -51,10 +50,12 @@ func _ChangeGameMode(mode : GAMEMODE):
 		GAMEMODE.Cube:
 			player.add_child(cube.instantiate())
 		GAMEMODE.Ship:
+			player.velocity.y *= 0.5
 			player.add_child(ship.instantiate())
 		GAMEMODE.Ball:
 			player.add_child(ball.instantiate())
 		GAMEMODE.Ufo:
+			player.velocity.y *= 0.5
 			player.add_child(ufo.instantiate())
 		GAMEMODE.Wave:
 			player.add_child(wave.instantiate())

@@ -119,6 +119,10 @@ horizontal_alignment = 1
 autowrap_mode = 1
 script = ExtResource("7_kul4i")
 
+[node name="ScoreTimer" type="Timer" parent="CanvasLayer/TM/txt" unique_id=127895753]
+wait_time = 0.2
+autostart = true
+
 [node name="TR" type="Control" parent="CanvasLayer" unique_id=742080052]
 layout_mode = 3
 anchors_preset = 1
@@ -152,3 +156,4 @@ stream = ExtResource("10_7gi1t")
 [connection signal="timeout" from="deadTimer" to="." method="_on_dead_timer_timeout"]
 [connection signal="body_entered" from="TopView/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="SpeedUp" to="." method="_on_speed_up_timeout"]
+[connection signal="timeout" from="CanvasLayer/TM/txt/ScoreTimer" to="CanvasLayer/TM/txt" method="_on_score_timer_timeout"]
