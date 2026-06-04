@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cw0fu6iel6api"]
 
-[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="1_bqhpl"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Content/Spike/spike.tscn" id="1_bqhpl"]
 [ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_g5xic"]
-[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_g5xic"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_g5xic"]
 [ext_resource type="Script" uid="uid://pqhfj1dk0lj1" path="res://Chunks/chunk_2.gd" id="2_n6p3p"]
-[ext_resource type="PackedScene" uid="uid://brfy68j8mo1nv" path="res://Pads/Yellow/yellow_pad.tscn" id="4_dsoga"]
-[ext_resource type="Script" uid="uid://btvee62dppw4q" path="res://Chunks/scripts/Chunk4/chunk4_pillar.gd" id="6_3dfv2"]
+[ext_resource type="PackedScene" uid="uid://brfy68j8mo1nv" path="res://Content/Pads/Yellow/yellow_pad.tscn" id="4_dsoga"]
+[ext_resource type="Script" uid="uid://vniu2kjaei33" path="res://Chunks/scripts/random_lane.gd" id="6_3dfv2"]
 
 [node name="Chunk2" unique_id=661201130 instance=ExtResource("1_g5xic")]
 script = ExtResource("2_n6p3p")
@@ -30,6 +30,7 @@ size = Vector3(10, 4, 110)
 
 [node name="Block2" parent="." index="4" unique_id=653723901 instance=ExtResource("2_g5xic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -40)
+collision_layer = 18
 hide_if_near = true
 
 [node name="Double" parent="Block2" index="4" unique_id=1813310228 instance=ExtResource("1_bqhpl")]
@@ -46,6 +47,7 @@ transform = Transform3D(0.9999695, -0.0076096077, 0.0017575643, 0.007639602, 0.9
 
 [node name="Block4" parent="." index="5" unique_id=2042680226 instance=ExtResource("2_g5xic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -24)
+collision_layer = 18
 hide_if_near = true
 
 [node name="Spike4" parent="Block4" index="4" unique_id=1439839588 instance=ExtResource("1_bqhpl")]
@@ -62,6 +64,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, -12)
 
 [node name="Block3" parent="." index="9" unique_id=1144567454 instance=ExtResource("2_g5xic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -32)
+collision_layer = 18
 hide_if_near = true
 
 [node name="Spike4" parent="." index="10" unique_id=2057448669 instance=ExtResource("1_bqhpl")]

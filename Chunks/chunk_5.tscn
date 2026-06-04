@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dd0ocwxpu0fa"]
 
 [ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_j14k0"]
-[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Block/block.tscn" id="2_13h21"]
-[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Portal/portal.tscn" id="3_13h21"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_13h21"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_13h21"]
 [ext_resource type="Script" uid="uid://byfohophmvj4g" path="res://Chunks/scripts/Chunk5/chunk_5_behavior.gd" id="4_ntols"]
-[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Spike/spike.tscn" id="5_ntols"]
+[ext_resource type="PackedScene" uid="uid://cw51v6fo6hkuo" path="res://Content/Block/evil_block.tscn" id="4_sffse"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Content/Spike/spike.tscn" id="5_ntols"]
 
 [node name="Chunk5" unique_id=661201130 instance=ExtResource("1_j14k0")]
 
@@ -14,180 +15,179 @@ aabb = AABB(-10, -2, -90, 20, 8, 180)
 [node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_13h21")]
 size = Vector3(10, 4, 160)
 
-[node name="Base3" parent="." index="2" unique_id=953569396 instance=ExtResource("2_13h21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-kill = true
-size = Vector3(10, 2, 100)
-
-[node name="Base4" parent="." index="3" unique_id=657636480 instance=ExtResource("2_13h21")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
-kill = true
-hide_if_near = false
-size = Vector3(10, 2, 100)
-
-[node name="Base2" parent="." index="4" unique_id=1579980307 instance=ExtResource("2_13h21")]
+[node name="Base2" parent="." index="2" unique_id=1579980307 instance=ExtResource("2_13h21")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0)
 hide_if_near = false
 glow = false
 size = Vector3(10, 4, 160)
 
-[node name="Portal" parent="." index="5" unique_id=1868742556 instance=ExtResource("3_13h21")]
+[node name="Portal" parent="." index="3" unique_id=1868742556 instance=ExtResource("3_13h21")]
 transform = Transform3D(1.5, 0, 2.6816156e-08, 0, 1.5, 0, -2.6816156e-08, 0, 1.5, 0, 5.9063597, -69)
 gameMode = 1
 
-[node name="Portal3" parent="." index="6" unique_id=1649517924 instance=ExtResource("3_13h21")]
+[node name="Portal3" parent="." index="4" unique_id=1649517924 instance=ExtResource("3_13h21")]
 transform = Transform3D(2.5, 0, 4.4693596e-08, 0, 2.5, 0, -4.4693596e-08, 0, 2.5, 0, 9.00636, 59)
 
-[node name="Pivot" type="Node3D" parent="." index="7" unique_id=330751859]
+[node name="EvilBlock" parent="." index="5" unique_id=796740454 instance=ExtResource("4_sffse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+size = Vector3(10, 4, 100)
+
+[node name="EvilBlock2" parent="." index="6" unique_id=535593835 instance=ExtResource("4_sffse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17, 0)
+size = Vector3(10, 4, 100)
+
+[node name="Pivots" type="Node3D" parent="." index="7" unique_id=552629500]
+
+[node name="Pivot" type="Node3D" parent="Pivots" index="0" unique_id=330751859]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -49)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot" index="0" unique_id=2057448669 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot" index="0" unique_id=2057448669 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot2" type="Node3D" parent="." index="8" unique_id=251349385]
+[node name="Pivot2" type="Node3D" parent="Pivots" index="1" unique_id=251349385]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -35)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot2" index="0" unique_id=1434615296 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot2" index="0" unique_id=1434615296 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot3" type="Node3D" parent="." index="9" unique_id=1114988192]
+[node name="Pivot3" type="Node3D" parent="Pivots" index="2" unique_id=1114988192]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -47)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot3" index="0" unique_id=794028406 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot3" index="0" unique_id=794028406 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 5)
 
-[node name="Pivot4" type="Node3D" parent="." index="10" unique_id=283535751]
+[node name="Pivot4" type="Node3D" parent="Pivots" index="3" unique_id=283535751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -28)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot4" index="0" unique_id=540204762 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot4" index="0" unique_id=540204762 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot5" type="Node3D" parent="." index="11" unique_id=617257793]
+[node name="Pivot5" type="Node3D" parent="Pivots" index="4" unique_id=617257793]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -14)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot5" index="0" unique_id=1436515447 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot5" index="0" unique_id=1436515447 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot7" type="Node3D" parent="." index="12" unique_id=874685812]
+[node name="Pivot7" type="Node3D" parent="Pivots" index="5" unique_id=874685812]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -8)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot7" index="0" unique_id=1275434030 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot7" index="0" unique_id=1275434030 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot8" type="Node3D" parent="." index="13" unique_id=175729501]
+[node name="Pivot8" type="Node3D" parent="Pivots" index="6" unique_id=175729501]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -2)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot8" index="0" unique_id=655842903 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot8" index="0" unique_id=655842903 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot9" type="Node3D" parent="." index="14" unique_id=265543227]
+[node name="Pivot9" type="Node3D" parent="Pivots" index="7" unique_id=265543227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 4)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot9" index="0" unique_id=1702396507 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot9" index="0" unique_id=1702396507 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot10" type="Node3D" parent="." index="15" unique_id=763033483]
+[node name="Pivot10" type="Node3D" parent="Pivots" index="8" unique_id=763033483]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 9)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot10" index="0" unique_id=209146181 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot10" index="0" unique_id=209146181 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot11" type="Node3D" parent="." index="16" unique_id=1805775553]
+[node name="Pivot11" type="Node3D" parent="Pivots" index="9" unique_id=1805775553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 14)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot11" index="0" unique_id=836056741 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot11" index="0" unique_id=836056741 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot19" type="Node3D" parent="." index="17" unique_id=1776754751]
+[node name="Pivot19" type="Node3D" parent="Pivots" index="10" unique_id=1776754751]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 19)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot19" index="0" unique_id=274246990 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot19" index="0" unique_id=274246990 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot20" type="Node3D" parent="." index="18" unique_id=35820869]
+[node name="Pivot20" type="Node3D" parent="Pivots" index="11" unique_id=35820869]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 23)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot20" index="0" unique_id=799381447 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot20" index="0" unique_id=799381447 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot12" type="Node3D" parent="." index="19" unique_id=479127091]
+[node name="Pivot12" type="Node3D" parent="Pivots" index="12" unique_id=479127091]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 27)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot12" index="0" unique_id=1479012278 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot12" index="0" unique_id=1479012278 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot13" type="Node3D" parent="." index="20" unique_id=1705635091]
+[node name="Pivot13" type="Node3D" parent="Pivots" index="13" unique_id=1705635091]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 30)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot13" index="0" unique_id=740761583 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot13" index="0" unique_id=740761583 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 1)
 
-[node name="Pivot14" type="Node3D" parent="." index="21" unique_id=1909775141]
+[node name="Pivot14" type="Node3D" parent="Pivots" index="14" unique_id=1909775141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 34)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot14" index="0" unique_id=474427169 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot14" index="0" unique_id=474427169 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot15" type="Node3D" parent="." index="22" unique_id=922754405]
+[node name="Pivot15" type="Node3D" parent="Pivots" index="15" unique_id=922754405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 37)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot15" index="0" unique_id=838683458 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot15" index="0" unique_id=838683458 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot16" type="Node3D" parent="." index="23" unique_id=963273753]
+[node name="Pivot16" type="Node3D" parent="Pivots" index="16" unique_id=963273753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 40)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot16" index="0" unique_id=1734376713 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot16" index="0" unique_id=1734376713 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot17" type="Node3D" parent="." index="24" unique_id=1235069613]
+[node name="Pivot17" type="Node3D" parent="Pivots" index="17" unique_id=1235069613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 42)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot17" index="0" unique_id=355510288 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot17" index="0" unique_id=355510288 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot18" type="Node3D" parent="." index="25" unique_id=281369411]
+[node name="Pivot18" type="Node3D" parent="Pivots" index="18" unique_id=281369411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 44)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot18" index="0" unique_id=1295030971 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot18" index="0" unique_id=1295030971 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot21" type="Node3D" parent="." index="26" unique_id=831765907]
+[node name="Pivot21" type="Node3D" parent="Pivots" index="19" unique_id=831765907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 46)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot21" index="0" unique_id=2022079885 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot21" index="0" unique_id=2022079885 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot22" type="Node3D" parent="." index="27" unique_id=597798872]
+[node name="Pivot22" type="Node3D" parent="Pivots" index="20" unique_id=597798872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 48)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot22" index="0" unique_id=1840524726 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot22" index="0" unique_id=1840524726 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="Pivot6" type="Node3D" parent="." index="28" unique_id=151606178]
+[node name="Pivot6" type="Node3D" parent="Pivots" index="21" unique_id=151606178]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -26)
 script = ExtResource("4_ntols")
 
-[node name="Spike" parent="Pivot6" index="0" unique_id=1110968778 instance=ExtResource("5_ntols")]
+[node name="Spike" parent="Pivots/Pivot6" index="0" unique_id=1110968778 instance=ExtResource("5_ntols")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 5)

@@ -1,9 +1,8 @@
 @tool
 
-class_name Block
-extends StaticBody3D
+class_name EvilBlock
+extends Node3D
 
-@export var hide_if_near = false
 @export var glow : bool = true
 
 @export var size : Vector3:
@@ -18,20 +17,14 @@ func update_size():
 		$glow.mesh.size = size
 	else:
 		$inside.mesh.size = size
-	
-	if get_node("hitbox") != null:	
-		$hitbox.shape.size = size
-	
+
 	$killbox/hitbox.shape.size = Vector3(size.x + 0.01, size.y - 0.35, size.z + 0.01)
 		
 func update_others():
 	if not glow:
 		$glow.queue_free()
 		
-func _ready() -> void:
-	if hide_if_near:
-		set_collision_layer_value(5, true)
-		
+func _ready() -> void:	
 	update_size()
 	update_others()
 	

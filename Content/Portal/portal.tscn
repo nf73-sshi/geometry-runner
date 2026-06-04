@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctilsskg1cgx0"]
 
-[ext_resource type="Script" uid="uid://lhl6hor7cyil" path="res://Portal/portal.gd" id="1_oixwc"]
-[ext_resource type="Material" uid="uid://b2raffr3lw0rf" path="res://Portal/base_mat.tres" id="2_hgvv3"]
+[ext_resource type="Script" uid="uid://lhl6hor7cyil" path="res://Content/Portal/portal.gd" id="1_oixwc"]
+[ext_resource type="Material" uid="uid://b2raffr3lw0rf" path="res://Content/Portal/base_mat.tres" id="2_hgvv3"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_mjwqv"]
 resource_local_to_scene = true
@@ -63,6 +63,7 @@ mesh = SubResource("TorusMesh_oixwc")
 
 [node name="hitbox" type="Area3D" parent="." unique_id=1052109189]
 collision_layer = 8
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox" unique_id=1890953648]
 shape = SubResource("BoxShape3D_oixwc")

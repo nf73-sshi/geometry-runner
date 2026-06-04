@@ -95,7 +95,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar" index="0" unique_id=1891880807 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -114,7 +113,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar3" index="0" unique_id=442315035 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -133,7 +131,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar5" index="0" unique_id=867871573 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -152,7 +149,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar6" index="0" unique_id=301412874 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -171,7 +167,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar7" index="0" unique_id=521398909 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -190,7 +185,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar8" index="0" unique_id=2118033850 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
@@ -209,7 +203,6 @@ script = ExtResource("6_s607j")
 
 [node name="Block" parent="Pillar9" index="0" unique_id=434471657 instance=ExtResource("2_n1mif")]
 collision_layer = 18
-kill = true
 hide_if_near = true
 size = Vector3(1, 9, 1)
 
