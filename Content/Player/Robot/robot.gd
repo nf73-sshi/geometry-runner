@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 			$HoldTimer.stop()
 			parent.need_to_jump = false		
 		else:
-			parent._Jump(App.player_jump_impulse * 0.6)
+			parent._Jump(App.player_jump_impulse * 0.5)
 			
 	if parent.need_to_jump:
 		if parent._CanJump():

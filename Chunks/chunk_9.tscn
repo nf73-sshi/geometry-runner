@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://cftymk875mfwo"]
+
+[ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_f5chc"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_4sa7n"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="4_b6k3e"]
+[ext_resource type="PackedScene" uid="uid://dj087o0wp2ej4" path="res://Content/Spike/spike.tscn" id="4_c78v1"]
+[ext_resource type="PackedScene" uid="uid://cw51v6fo6hkuo" path="res://Content/Block/evil_block.tscn" id="5_c78v1"]
+[ext_resource type="Script" uid="uid://vniu2kjaei33" path="res://Chunks/scripts/random_lane.gd" id="6_e335r"]
+[ext_resource type="Script" uid="uid://c6l4wsnufll67" path="res://Chunks/scripts/missing_one.gd" id="7_o0iac"]
+[ext_resource type="PackedScene" uid="uid://s2nbx58oyfiu" path="res://Content/Orbs/Red/red_orb.tscn" id="8_koodj"]
+
+[node name="Chunk9" unique_id=661201130 instance=ExtResource("1_f5chc")]
+
+[node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
+aabb = AABB(-10, -4, -70, 20, 8, 140)
+
+[node name="Base" parent="." index="1" unique_id=1736002682 instance=ExtResource("2_4sa7n")]
+size = Vector3(10, 4, 110)
+
+[node name="EvilBlock" parent="Base" index="4" unique_id=796740454 instance=ExtResource("5_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -7)
+size = Vector3(10, 3, 54)
+
+[node name="Portal" parent="." index="2" unique_id=1868742556 instance=ExtResource("4_b6k3e")]
+transform = Transform3D(1.5, 0, -1.0878242e-07, 0, 1.5, 0, 1.0878242e-07, 0, 1.5, 0, 6, -48)
+gameMode = 5
+
+[node name="Portal2" parent="." index="3" unique_id=430464137 instance=ExtResource("4_b6k3e")]
+transform = Transform3D(1.5, 0, -1.0878242e-07, 0, 1.5, 0, 1.0878242e-07, 0, 1.5, 0, 6, 46)
+
+[node name="Climb" parent="." index="4" unique_id=1290409205 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -33)
+size = Vector3(10, 2, 2.5)
+
+[node name="Block8" parent="Climb" index="4" unique_id=1732977618 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 3)
+size = Vector3(10, 2, 2)
+
+[node name="Block2" parent="Climb/Block8" index="4" unique_id=1859415699 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 3)
+size = Vector3(10, 2, 2.5)
+
+[node name="Block3" parent="Climb/Block8/Block2" index="4" unique_id=839560970 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+size = Vector3(10, 2, 2.5)
+
+[node name="Pivot3" type="Node3D" parent="Climb/Block8/Block2/Block3" index="4" unique_id=119001393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("6_e335r")
+
+[node name="Spike2" parent="Climb/Block8/Block2/Block3/Pivot3" index="0" unique_id=752114579 instance=ExtResource("4_c78v1")]
+
+[node name="Pivot2" type="Node3D" parent="Climb/Block8/Block2" index="5" unique_id=187000260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("6_e335r")
+
+[node name="Spike2" parent="Climb/Block8/Block2/Pivot2" index="0" unique_id=1872075943 instance=ExtResource("4_c78v1")]
+
+[node name="Pivot" type="Node3D" parent="Climb" index="5" unique_id=2060104123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("6_e335r")
+
+[node name="Spike2" parent="Climb/Pivot" index="0" unique_id=1317388523 instance=ExtResource("4_c78v1")]
+
+[node name="Stair" parent="." index="5" unique_id=1065845423 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -12)
+size = Vector3(10, 2, 2)
+
+[node name="Block5" parent="Stair" index="4" unique_id=1055543529 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.5)
+size = Vector3(10, 2, 7)
+
+[node name="Block7" parent="Stair" index="5" unique_id=1653181445 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+size = Vector3(10, 2, 2)
+
+[node name="Spike9" parent="Stair/Block7" index="4" unique_id=1258332138 instance=ExtResource("4_c78v1")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 3, -2, 0)
+
+[node name="Spike12" parent="Stair/Block7/Spike9" index="3" unique_id=1676422928 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Spike13" parent="Stair/Block7/Spike9/Spike12" index="3" unique_id=1973382376 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Spike7" parent="Stair" index="6" unique_id=708815105 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.0500002, 5)
+
+[node name="Spike11" parent="Stair/Spike7" index="3" unique_id=914003656 instance=ExtResource("4_c78v1")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, -2.0500002, 0)
+
+[node name="Spike8" parent="Stair" index="7" unique_id=1756382877 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.0500002, 5)
+
+[node name="Spike10" parent="Stair/Spike8" index="3" unique_id=1850363045 instance=ExtResource("4_c78v1")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, -2.0500002, 0)
+
+[node name="Block6" parent="." index="6" unique_id=1951274348 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 4)
+size = Vector3(10, 1, 2)
+
+[node name="Triple" type="Node3D" parent="Block6" index="4" unique_id=1192134705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("7_o0iac")
+
+[node name="Spike2" parent="Block6/Triple" index="0" unique_id=1559401463 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Spike3" parent="Block6/Triple" index="1" unique_id=851771194 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, 0)
+
+[node name="Spike4" parent="Block6/Triple" index="2" unique_id=998202514 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, 0)
+
+[node name="Block8" parent="." index="7" unique_id=354606465 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 23)
+size = Vector3(10, 2, 6)
+
+[node name="Triple" type="Node3D" parent="Block8" index="4" unique_id=1435133166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Spike2" parent="Block8/Triple" index="0" unique_id=2040943594 instance=ExtResource("4_c78v1")]
+
+[node name="Spike3" parent="Block8/Triple" index="1" unique_id=508142578 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Spike4" parent="Block8/Triple" index="2" unique_id=1775550751 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Triple2" type="Node3D" parent="Block8" index="5" unique_id=984771102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2)
+
+[node name="Spike2" parent="Block8/Triple2" index="0" unique_id=1519129698 instance=ExtResource("4_c78v1")]
+
+[node name="Spike3" parent="Block8/Triple2" index="1" unique_id=1644071439 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Spike4" parent="Block8/Triple2" index="2" unique_id=1614979081 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Triple3" type="Node3D" parent="Block8" index="6" unique_id=953197338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
+
+[node name="Spike2" parent="Block8/Triple3" index="0" unique_id=1357548617 instance=ExtResource("4_c78v1")]
+
+[node name="Spike3" parent="Block8/Triple3" index="1" unique_id=2003096906 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="Spike4" parent="Block8/Triple3" index="2" unique_id=1608018335 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Spike" parent="." index="8" unique_id=1146051469 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -35)
+
+[node name="Spike2" parent="Spike" index="3" unique_id=72117563 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, -0.5, -2)
+
+[node name="Spike4" parent="." index="9" unique_id=644450913 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -35)
+
+[node name="Spike2" parent="Spike4" index="3" unique_id=1705299036 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, -0.5, -2)
+
+[node name="Spike3" parent="." index="10" unique_id=1908272638 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -35)
+
+[node name="Spike2" parent="Spike3" index="3" unique_id=152505867 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, -0.5, -2)
+
+[node name="PivorOrb" type="Node3D" parent="." index="11" unique_id=41034845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 14)
+script = ExtResource("6_e335r")
+
+[node name="RedOrb" parent="PivorOrb" index="0" unique_id=1657560102 instance=ExtResource("8_koodj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
