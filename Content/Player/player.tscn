@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bysm0bo0smcmh" path="res://Content/Player/behavior.gd" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://c71d8aj85xrx2" path="res://Content/Player/Cube/cube.tscn" id="2_btcbx"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="3_x8iml"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ntmi"]
 size = Vector3(2, 2, 2)
@@ -33,11 +34,8 @@ initial_velocity_max = 2.0
 gravity = Vector3(0, 0, 0)
 damping_max = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbsyd"]
-albedo_color = Color(0, 2.1168277, 0, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_x8iml"]
-material = SubResource("StandardMaterial3D_kbsyd")
+material = ExtResource("3_x8iml")
 size = Vector3(0.15, 0.15, 0.15)
 
 [node name="Player" type="CharacterBody3D" unique_id=404199503 groups=["Player"]]

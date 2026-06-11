@@ -7,11 +7,10 @@
 [ext_resource type="Material" uid="uid://iy1vvnypix6o" path="res://Content/Player/Wave/mat_ufo_top.tres" id="3_6jf12"]
 [ext_resource type="ArrayMesh" uid="uid://bvjdyv84uws00" path="res://Content/Player/Ufo/cube_c1.tres" id="3_7kpl7"]
 [ext_resource type="ArrayMesh" uid="uid://bref8fa1mhxry" path="res://Content/Player/Ufo/ufo_bottom_2.tres" id="3_h3rdn"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="3_na575"]
 [ext_resource type="ArrayMesh" uid="uid://t17lsejutgic" path="res://Content/Player/Ufo/cube_face.tres" id="4_ry3qd"]
 [ext_resource type="Material" uid="uid://c6yco0styquvr" path="res://Content/Player/Wave/mat_ufo_bottom.tres" id="5_a0wuc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrcqt"]
-albedo_color = Color(0, 1, 1, 1)
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="6_0p762"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oo456"]
 resource_name = "Material.001"
@@ -214,6 +213,7 @@ transform = Transform3D(5.2, 0, 0, 0, 5.2, 0, 0, 0, 5.2, 0, -0.42417645, 0)
 [node name="c1" type="MeshInstance3D" parent="Pivot" unique_id=1665637200]
 transform = Transform3D(0.12802936, 0, 0, 0, 0.12802936, 0, 0, 0, 0.12802936, -0.003588818, -0.05167927, 0)
 mesh = ExtResource("1_u3k86")
+surface_material_override/0 = ExtResource("3_na575")
 
 [node name="glow" type="MeshInstance3D" parent="Pivot" unique_id=2061842856]
 transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, -0.003588818, -0.05167927, 0)
@@ -223,7 +223,7 @@ surface_material_override/0 = ExtResource("3_6jf12")
 [node name="c2" type="MeshInstance3D" parent="Pivot" unique_id=445609899]
 transform = Transform3D(0.20445098, 0, 0, 0, 0.11857741, 0, 0, 0, 0.20445098, -0.0035452198, -0.111955136, 0)
 mesh = ExtResource("2_fxsnr")
-surface_material_override/0 = SubResource("StandardMaterial3D_xrcqt")
+surface_material_override/0 = ExtResource("6_0p762")
 
 [node name="glow2" type="MeshInstance3D" parent="Pivot" unique_id=2036397273]
 transform = Transform3D(0.22, 0, 0, 0, 0.128, 0, 0, 0, 0.22, -0.0035452198, -0.111955136, 0)
@@ -233,6 +233,7 @@ surface_material_override/0 = ExtResource("5_a0wuc")
 [node name="c1_2" type="MeshInstance3D" parent="Pivot" unique_id=1672323219]
 transform = Transform3D(0.6881733, 0, 0, 0, 0.14916757, 0, 0, 0, 0.6881733, 8.7958404e-05, -0.064455375, 0)
 mesh = ExtResource("3_h3rdn")
+surface_material_override/0 = ExtResource("3_na575")
 
 [node name="glass" type="MeshInstance3D" parent="Pivot" unique_id=891552638]
 transform = Transform3D(2.4469023, 0, 0, 0, 0.08344089, 0, 0, 0, 2.4469023, -0.0020785853, 0.057621315, 0)
@@ -241,10 +242,12 @@ mesh = SubResource("ArrayMesh_ry3qd")
 [node name="c1_3" type="MeshInstance3D" parent="Pivot" unique_id=459906507]
 transform = Transform3D(0.3448412, 0, 0, 0, -0.25564936, -0.23142792, 0, 0.23142792, -0.25564936, 0.0012572912, -0.03559853, 0.19901985)
 mesh = SubResource("ArrayMesh_fxsnr")
+surface_material_override/0 = ExtResource("3_na575")
 
 [node name="c1_4" type="MeshInstance3D" parent="Pivot" unique_id=731832709]
 transform = Transform3D(-4.1108276e-08, 0.23142792, -0.25564936, -2.0554138e-08, -0.25564936, -0.23142792, -0.3448412, -1.2350468e-08, 4.4269953e-08, 0.19353269, -0.03559853, 0.0008808151)
 mesh = SubResource("ArrayMesh_h3rdn")
+surface_material_override/0 = ExtResource("3_na575")
 
 [node name="Cube" type="Node3D" parent="Pivot" unique_id=1855887916]
 transform = Transform3D(0.07692308, 0, 0, 0, 0.07692308, 0, 0, 0, 0.07692308, 0, 0.13746925, 0)
@@ -255,9 +258,11 @@ mesh = SubResource("ArrayMesh_4gpsc")
 
 [node name="c1" type="MeshInstance3D" parent="Pivot/Cube" unique_id=549620638]
 mesh = ExtResource("3_7kpl7")
+surface_material_override/0 = ExtResource("3_na575")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot/Cube" unique_id=1436222686]
 mesh = ExtResource("4_ry3qd")
+surface_material_override/0 = ExtResource("6_0p762")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1493400798]
 libraries/ = SubResource("AnimationLibrary_0p762")

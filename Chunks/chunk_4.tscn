@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_l1a4u"]
 [ext_resource type="Script" uid="uid://vniu2kjaei33" path="res://Chunks/scripts/random_lane.gd" id="4_2ur20"]
 [ext_resource type="PackedScene" uid="uid://nh3tyb5f88v6" path="res://Content/Pads/Red/red_pad.tscn" id="5_2ur20"]
+[ext_resource type="Script" uid="uid://c6l4wsnufll67" path="res://Chunks/scripts/missing_one.gd" id="6_rto8s"]
 [ext_resource type="PackedScene" uid="uid://cw51v6fo6hkuo" path="res://Content/Block/evil_block.tscn" id="6_ymx53"]
 
 [node name="Chunk4" unique_id=661201130 instance=ExtResource("1_6jx6e")]
@@ -23,115 +24,208 @@ gameMode = 5
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 5.9351716, 47)
 
 [node name="Pillar" type="Node3D" parent="." index="4" unique_id=1827596811]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -34)
 script = ExtResource("4_2ur20")
 
 [node name="RedPad" parent="Pillar" index="0" unique_id=1390887695 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -16)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar12" type="Node3D" parent="." index="5" unique_id=1121297291]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -18)
+[node name="Pillar3" type="Node3D" parent="." index="5" unique_id=881964662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -28)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar12" index="0" unique_id=1655947358 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -5)
+[node name="RedPad" parent="Pillar3" index="0" unique_id=732991820 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -2)
 
-[node name="Pillar2" type="Node3D" parent="." index="6" unique_id=193907450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -8)
+[node name="Pillar2" type="Node3D" parent="." index="6" unique_id=586352604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -28)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar2" index="0" unique_id=213016014 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -5)
+[node name="RedPad2" parent="Pillar2" index="0" unique_id=1788215065 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 2)
 
-[node name="Pillar3" type="Node3D" parent="." index="7" unique_id=571144243]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+[node name="Pillar5" type="Node3D" parent="." index="7" unique_id=1014947527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -22)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar3" index="0" unique_id=2037904837 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar5" index="0" unique_id=95490642 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar15" type="Node3D" parent="." index="8" unique_id=1069074316]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+[node name="Pillar7" type="Node3D" parent="." index="8" unique_id=324311319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -16)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar15" index="0" unique_id=625067873 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar7" index="0" unique_id=213280671 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -2)
 
-[node name="Pillar13" type="Node3D" parent="." index="9" unique_id=1875439406]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+[node name="Pillar8" type="Node3D" parent="." index="9" unique_id=1155599536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -13)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar13" index="0" unique_id=495661560 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -5)
+[node name="RedPad" parent="Pillar8" index="0" unique_id=1034261820 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -1)
 
-[node name="Pillar4" type="Node3D" parent="." index="10" unique_id=1127157607]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 7)
+[node name="Pillar9" type="Node3D" parent="." index="10" unique_id=1729050429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -10)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar4" index="0" unique_id=1090221260 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar9" index="0" unique_id=1178194879 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar5" type="Node3D" parent="." index="11" unique_id=1197958318]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 13)
+[node name="Pillar10" type="Node3D" parent="." index="11" unique_id=1898804168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -7)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar5" index="0" unique_id=685532471 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar10" index="0" unique_id=644181205 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar6" type="Node3D" parent="." index="12" unique_id=853354462]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 19)
+[node name="Pillar11" type="Node3D" parent="." index="12" unique_id=429468348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar6" index="0" unique_id=608576910 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar11" index="0" unique_id=905614238 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 42)
 
-[node name="Pillar11" type="Node3D" parent="." index="13" unique_id=139213716]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 19)
+[node name="Pillar13" type="Node3D" parent="." index="13" unique_id=807441013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -1)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar11" index="0" unique_id=2020280900 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar13" index="0" unique_id=83020821 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar7" type="Node3D" parent="." index="14" unique_id=2037507146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 24)
+[node name="Pillar15" type="Node3D" parent="." index="14" unique_id=632140798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar7" index="0" unique_id=738918088 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar15" index="0" unique_id=1135694667 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar8" type="Node3D" parent="." index="15" unique_id=557656804]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 28)
+[node name="Pillar17" type="Node3D" parent="." index="15" unique_id=1299076312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 8)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar8" index="0" unique_id=563856901 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar17" index="0" unique_id=1237088101 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar9" type="Node3D" parent="." index="16" unique_id=183761621]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 32)
+[node name="Pillar19" type="Node3D" parent="." index="16" unique_id=2056339510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 14)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar9" index="0" unique_id=407233790 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar19" index="0" unique_id=1383839063 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -3)
 
-[node name="Pillar10" type="Node3D" parent="." index="17" unique_id=1229075699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 32)
+[node name="Pillar20" type="Node3D" parent="." index="17" unique_id=488588252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 20)
 script = ExtResource("4_2ur20")
 
-[node name="RedPad" parent="Pillar10" index="0" unique_id=912164988 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+[node name="RedPad" parent="Pillar20" index="0" unique_id=767918584 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Pillar14" type="Node3D" parent="." index="18" unique_id=1967694097]
+[node name="Pillar23" type="Node3D" parent="." index="18" unique_id=410145219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 17)
+script = ExtResource("4_2ur20")
+
+[node name="RedPad" parent="Pillar23" index="0" unique_id=161314880 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Pillar21" type="Node3D" parent="." index="19" unique_id=1571261335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 26)
+script = ExtResource("4_2ur20")
+
+[node name="RedPad" parent="Pillar21" index="0" unique_id=1948030546 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Pillar22" type="Node3D" parent="." index="20" unique_id=1721082589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 29)
+script = ExtResource("4_2ur20")
+
+[node name="RedPad" parent="Pillar22" index="0" unique_id=754219859 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Pillar24" type="Node3D" parent="." index="21" unique_id=686887086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 35)
+script = ExtResource("4_2ur20")
+
+[node name="RedPad" parent="Pillar24" index="0" unique_id=1616472116 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="TriplePillar" type="Node3D" parent="." index="22" unique_id=325272264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 23)
+script = ExtResource("6_rto8s")
+
+[node name="RedPad" parent="TriplePillar" index="0" unique_id=1911874505 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="RedPad2" parent="TriplePillar" index="1" unique_id=1689186894 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, 0, 0)
+
+[node name="RedPad3" parent="TriplePillar" index="2" unique_id=3249435 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3, 0, 0)
+
+[node name="TriplePillar5" type="Node3D" parent="." index="23" unique_id=1780741726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 32)
+script = ExtResource("6_rto8s")
+
+[node name="RedPad" parent="TriplePillar5" index="0" unique_id=1945656900 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="RedPad2" parent="TriplePillar5" index="1" unique_id=572471535 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, 0, 0)
+
+[node name="RedPad3" parent="TriplePillar5" index="2" unique_id=275263662 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3, 0, 0)
+
+[node name="TriplePillar2" type="Node3D" parent="." index="24" unique_id=1668836420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5)
+script = ExtResource("6_rto8s")
+
+[node name="RedPad" parent="TriplePillar2" index="0" unique_id=1545199885 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="RedPad2" parent="TriplePillar2" index="1" unique_id=33735319 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, 0, 0)
+
+[node name="RedPad3" parent="TriplePillar2" index="2" unique_id=1379376024 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3, 0, 0)
+
+[node name="TriplePillar3" type="Node3D" parent="." index="25" unique_id=392162985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4)
+script = ExtResource("6_rto8s")
+
+[node name="RedPad" parent="TriplePillar3" index="0" unique_id=1840517026 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="RedPad2" parent="TriplePillar3" index="1" unique_id=545290014 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, 0, 0)
+
+[node name="RedPad3" parent="TriplePillar3" index="2" unique_id=839421502 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3, 0, 0)
+
+[node name="TriplePillar4" type="Node3D" parent="." index="26" unique_id=1843447338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 14)
+script = ExtResource("6_rto8s")
+
+[node name="RedPad" parent="TriplePillar4" index="0" unique_id=2120900822 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="RedPad2" parent="TriplePillar4" index="1" unique_id=1900822161 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, 0, 0)
+
+[node name="RedPad3" parent="TriplePillar4" index="2" unique_id=2002631407 instance=ExtResource("5_2ur20")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3, 0, 0)
+
+[node name="Pillar14" type="Node3D" parent="." index="27" unique_id=1967694097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 6, 38)
 
 [node name="RedPad" parent="Pillar14" index="0" unique_id=157966115 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 3)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -4, 3)
 
 [node name="RedPad2" parent="Pillar14" index="1" unique_id=1749019659 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -4, 3)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -6, -4, 3)
 
 [node name="RedPad3" parent="Pillar14" index="2" unique_id=1405571969 instance=ExtResource("5_2ur20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -4, 3)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -3, -4, 3)
 
-[node name="EvilBlock" parent="." index="19" unique_id=796740454 instance=ExtResource("6_ymx53")]
+[node name="EvilBlock" parent="." index="28" unique_id=796740454 instance=ExtResource("6_ymx53")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.19475, 0)
 size = Vector3(10, 4, 120)

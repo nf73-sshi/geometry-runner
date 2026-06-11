@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://nh3tyb5f88v6"]
 
-[ext_resource type="PackedScene" uid="uid://bq0yo718fa6p2" path="res://Pads/pad.tscn" id="1_mc4fm"]
-[ext_resource type="ArrayMesh" uid="uid://boou0bnffvju0" path="res://Pads/Red/red_pad.tres" id="2_lmaay"]
-[ext_resource type="Script" uid="uid://56gw76otjd6b" path="res://Pads/Red/red_pad.gd" id="2_m7v1f"]
+[ext_resource type="PackedScene" uid="uid://bq0yo718fa6p2" path="res://Content/Pads/pad.tscn" id="1_mc4fm"]
+[ext_resource type="ArrayMesh" uid="uid://boou0bnffvju0" path="res://Content/Pads/Red/red_pad.tres" id="2_lmaay"]
+[ext_resource type="Script" uid="uid://56gw76otjd6b" path="res://Content/Pads/Red/red_pad.gd" id="2_m7v1f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xonke"]
 resource_name = "Material.002"

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Content/Player/rotate_pivot.gd" id="1_ci6by"]
 [ext_resource type="Script" uid="uid://bc6bewowmca5m" path="res://Content/Player/Ship/ship.gd" id="1_yhveh"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="2_ntywx"]
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="3_sofrs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr3te"]
 resource_name = "Black"
@@ -273,9 +275,11 @@ mesh = SubResource("ArrayMesh_a3h6d")
 
 [node name="c1" type="MeshInstance3D" parent="Pivot/Ships_001_2" unique_id=1990943445]
 mesh = SubResource("ArrayMesh_f06yf")
+surface_material_override/0 = ExtResource("2_ntywx")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot/Ships_001_2" unique_id=937014686]
 mesh = SubResource("ArrayMesh_xs3ee")
+surface_material_override/0 = ExtResource("3_sofrs")
 
 [node name="Cube" type="Node3D" parent="Pivot" unique_id=783068344]
 transform = Transform3D(-2.8412401e-08, 0, 0.65, 0, 0.65, 0, -0.65, 0, -2.8412401e-08, 0.8999999, 1.3565903, 1.0728835e-07)
@@ -286,9 +290,11 @@ mesh = SubResource("ArrayMesh_yhveh")
 
 [node name="c1" type="MeshInstance3D" parent="Pivot/Cube" unique_id=2044466348]
 mesh = SubResource("ArrayMesh_s7bco")
+surface_material_override/0 = ExtResource("2_ntywx")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot/Cube" unique_id=1829573872]
 mesh = SubResource("ArrayMesh_c56ng")
+surface_material_override/0 = ExtResource("3_sofrs")
 
 [node name="trail" type="GPUParticles3D" parent="Pivot" unique_id=602474045]
 transform = Transform3D(1.1920929e-07, 0, 1, 0, 1, 0, -1, 0, 1.1920929e-07, -0.3, 0.3028127, -0.02777344)

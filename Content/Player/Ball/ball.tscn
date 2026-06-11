@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://cho52iavw6ywr"]
 
-[ext_resource type="Script" uid="uid://drpkslpwwdnsp" path="res://Player/Ball/ball.gd" id="1_t61bo"]
+[ext_resource type="Script" uid="uid://drpkslpwwdnsp" path="res://Content/Player/Ball/ball.gd" id="1_t61bo"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="2_rgypg"]
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="3_q3q67"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmyoo"]
 resource_name = "ball_color_1"
@@ -43,9 +45,6 @@ shadow_mesh = SubResource("ArrayMesh_hkbw0")
 cull_mode = 1
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65bum"]
-albedo_color = Color(0, 1, 0, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3a2i"]
 resource_name = "ball_color_2"
 cull_mode = 2
@@ -83,10 +82,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e18mj")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bu5tm"]
-cull_mode = 1
-albedo_color = Color(0, 1, 1, 1)
-
 [node name="Ball" type="Node3D" unique_id=1959824052 groups=["GameMode"]]
 script = ExtResource("1_t61bo")
 
@@ -101,9 +96,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ey5py")
 [node name="c1" type="MeshInstance3D" parent="Pivot" unique_id=327652987]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ey5py")
-surface_material_override/0 = SubResource("StandardMaterial3D_65bum")
+surface_material_override/0 = ExtResource("2_rgypg")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot" unique_id=335538011]
 transform = Transform3D(0.8, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_65bum")
-surface_material_override/0 = SubResource("StandardMaterial3D_bu5tm")
+surface_material_override/0 = ExtResource("3_q3q67")

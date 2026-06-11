@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://c45i5l48fhns8"]
 
 [ext_resource type="Script" uid="uid://dx24l66papplm" path="res://Content/Player/Wave/wave.gd" id="1_4qmyd"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="2_5a2at"]
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="3_0fco5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmy3n"]
 resource_name = "Green"
@@ -97,14 +99,10 @@ initial_velocity_min = 50.0
 initial_velocity_max = 50.0
 gravity = Vector3(0, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vxs3"]
-transparency = 1
-albedo_color = Color(0, 18.892157, 0, 0.003921569)
-proximity_fade_distance = 5.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_4qmyd"]
-material = SubResource("StandardMaterial3D_3vxs3")
-size = Vector3(0.75, 0.75, 0.75)
+[sub_resource type="SphereMesh" id="SphereMesh_0fco5"]
+material = ExtResource("2_5a2at")
+radial_segments = 32
+rings = 16
 
 [node name="Wave" type="Node3D" unique_id=478240057 groups=["GameMode"]]
 script = ExtResource("1_4qmyd")
@@ -115,6 +113,7 @@ transform = Transform3D(7, 0, 0, 0, 1.05, 0, 0, 0, 1.05, 0, 0, 0)
 [node name="c1" type="MeshInstance3D" parent="Pivot" unique_id=950809178]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_jj8ux")
+surface_material_override/0 = ExtResource("2_5a2at")
 
 [node name="glow" type="MeshInstance3D" parent="Pivot" unique_id=513917421]
 transform = Transform3D(-4.8082526e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.8082526e-08, 0, 0, 0)
@@ -124,6 +123,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_jj8ux")
 [node name="c2" type="MeshInstance3D" parent="Pivot" unique_id=1116023984]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_4qmyd")
+surface_material_override/0 = ExtResource("3_0fco5")
 
 [node name="c4" type="MeshInstance3D" parent="Pivot" unique_id=368473524]
 transform = Transform3D(-4.8082526e-08, 0, 1.1, 0, 1.1, 0, -1.1, 0, -4.8082526e-08, 0, 0, 0)
@@ -132,8 +132,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4qmyd")
 
 [node name="trail" type="GPUParticles3D" parent="." unique_id=761666976]
 transform = Transform3D(7.000002, 0, 0, 0, 1.0500001, 0, 0, 0, 1.0500001, 0, 0, 0)
-amount = 2000
-lifetime = 3.0
+transparency = 0.95
+lod_bias = 0.001
+amount = 1000
 speed_scale = 2.0
+fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_4qmyd")
-draw_pass_1 = SubResource("BoxMesh_4qmyd")
+draw_pass_1 = SubResource("SphereMesh_0fco5")

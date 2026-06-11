@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://brt44ft6hr4o2"]
 
-[ext_resource type="Script" uid="uid://lxlrikmb2ubk" path="res://Player/Robot/robot.gd" id="1_aa3g1"]
+[ext_resource type="Script" uid="uid://lxlrikmb2ubk" path="res://Content/Player/Robot/robot.gd" id="1_aa3g1"]
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="2_0tgoj"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="3_eiw8l"]
 
 [sub_resource type="Animation" id="Animation_6581l"]
 length = 0.001
@@ -720,6 +722,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.01, 0)
 [node name="elbow" type="MeshInstance3D" parent="Pivot/LeftLeg/elbow_center" unique_id=152118739]
 transform = Transform3D(0.101606265, 0.09484101, -4.440892e-16, -0.09484101, 0.101606265, 0, -4.440892e-16, 4.440892e-16, 0.13899153, -0.12679002, -0.16233754, 0.0004899502)
 mesh = SubResource("ArrayMesh_5nvti")
+surface_material_override/0 = ExtResource("2_0tgoj")
 
 [node name="leg_center" type="Node3D" parent="Pivot/LeftLeg/elbow_center/elbow" unique_id=1515693041]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.099999905, -0.5, 0)
@@ -727,6 +730,7 @@ transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.099999905,
 [node name="leg" type="MeshInstance3D" parent="Pivot/LeftLeg/elbow_center/elbow/leg_center" unique_id=1634455023]
 transform = Transform3D(0.45072448, -3.9631615, 1.4210855e-14, 3.9631615, 0.45072448, 0, 0, -2.842171e-14, 3.98871, 1.6816704, -0.07115245, -1.66893e-06)
 mesh = SubResource("ArrayMesh_wny58")
+surface_material_override/0 = ExtResource("3_eiw8l")
 
 [node name="foot_center" type="Node3D" parent="Pivot/LeftLeg/elbow_center/elbow/leg_center/leg" unique_id=1285616900]
 transform = Transform3D(0.9999999, -2.9802319e-08, 1.0587912e-22, 2.9802319e-08, 0.9999999, -1.7763568e-15, -5.2939547e-23, 1.7763564e-15, 1.0000001, -0.019999832, -0.49999973, 0)
@@ -734,6 +738,7 @@ transform = Transform3D(0.9999999, -2.9802319e-08, 1.0587912e-22, 2.9802319e-08,
 [node name="foot" type="MeshInstance3D" parent="Pivot/LeftLeg/elbow_center/elbow/leg_center/leg/foot_center" unique_id=1576946158]
 transform = Transform3D(1.3719167, 1.1710688, 7.1054274e-15, -1.1710688, 1.3719167, 0, -7.1054274e-15, -1.1655207e-15, 1.8037615, 0.1245693, -0.43582273, 1.1920929e-07)
 mesh = SubResource("ArrayMesh_rndre")
+surface_material_override/0 = ExtResource("2_0tgoj")
 
 [node name="RightLeg" type="Node3D" parent="Pivot" unique_id=1742775696]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2, 0, -0.54)
@@ -744,6 +749,7 @@ transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 [node name="elbow" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center" unique_id=1902067179]
 transform = Transform3D(0.101606265, 0.09484101, -4.440892e-16, -0.09484101, 0.101606265, 0, -4.440892e-16, 4.440892e-16, 0.13899153, -0.12679002, -0.16233754, 0.0004899502)
 mesh = SubResource("ArrayMesh_5nvti")
+surface_material_override/0 = ExtResource("2_0tgoj")
 
 [node name="leg_center" type="Node3D" parent="Pivot/RightLeg/elbow_center/elbow" unique_id=1719679938]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -0.1, -0.5, 0)
@@ -751,6 +757,7 @@ transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -0.1,
 [node name="leg" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center" unique_id=2082191740]
 transform = Transform3D(0.45072418, -3.9631617, 1.4210855e-14, 3.9631617, 0.45072418, -3.5527137e-15, -5.3290705e-15, -2.842171e-14, 3.98871, 1.4816706, -0.07115215, -1.1920929e-06)
 mesh = SubResource("ArrayMesh_wny58")
+surface_material_override/0 = ExtResource("3_eiw8l")
 
 [node name="foot_center" type="Node3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center/leg" unique_id=397703801]
 transform = Transform3D(0.25070718, 0, 0, 0, 0.25070718, 0, 0, 0, 0.25070772, 0.02, -0.5, 0)
@@ -758,6 +765,7 @@ transform = Transform3D(0.25070718, 0, 0, 0, 0.25070718, 0, 0, 0, 0.25070772, 0.
 [node name="foot" type="MeshInstance3D" parent="Pivot/RightLeg/elbow_center/elbow/leg_center/leg/foot_center" unique_id=1190059188]
 transform = Transform3D(5.470877, 4.67257, 8.526513e-14, -4.6725707, 5.470877, -1.2789769e-13, 5.684342e-14, 5.967449e-16, 7.1946836, 0.3797462, -2.0126777, 0)
 mesh = SubResource("ArrayMesh_rndre")
+surface_material_override/0 = ExtResource("2_0tgoj")
 
 [node name="Neck" type="Node3D" parent="Pivot" unique_id=1586624216]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2, 0.14, 0)
@@ -765,6 +773,8 @@ transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, -0.2
 [node name="head" type="MeshInstance3D" parent="Pivot/Neck" unique_id=1294343306]
 transform = Transform3D(0.52961427, 0, -1.7763568e-15, 0, 0.52961427, 0, 1.7763568e-15, 0, 0.52961427, 0.10698441, 0.2324217, 1.3322676e-15)
 mesh = SubResource("ArrayMesh_vnaug")
+surface_material_override/0 = ExtResource("2_0tgoj")
+surface_material_override/1 = ExtResource("3_eiw8l")
 
 [node name="HoldTimer" type="Timer" parent="." unique_id=805482523]
 wait_time = 0.28

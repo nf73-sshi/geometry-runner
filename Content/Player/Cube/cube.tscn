@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://c71d8aj85xrx2"]
 
-[ext_resource type="Script" uid="uid://d0ljv7th0b4a0" path="res://Player/Cube/cube.gd" id="1_ac64n"]
-[ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Player/rotate_pivot.gd" id="1_rdby0"]
+[ext_resource type="Script" uid="uid://d0ljv7th0b4a0" path="res://Content/Player/Cube/cube.gd" id="1_ac64n"]
+[ext_resource type="Script" uid="uid://crf28d8quos8l" path="res://Content/Player/rotate_pivot.gd" id="1_rdby0"]
+[ext_resource type="Material" uid="uid://cqoeie3kei3hd" path="res://Content/Player/Colors/color2.tres" id="3_yodj3"]
+[ext_resource type="Material" uid="uid://c4i4sxl1sq6rf" path="res://Content/Player/Colors/color1.tres" id="4_v2r80"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7065"]
 resource_name = "Black"
@@ -187,9 +189,11 @@ mesh = SubResource("ArrayMesh_ac64n")
 
 [node name="c2" type="MeshInstance3D" parent="Pivot" unique_id=123519609]
 mesh = SubResource("ArrayMesh_xq6xg")
+surface_material_override/0 = ExtResource("3_yodj3")
 
 [node name="c1" type="MeshInstance3D" parent="Pivot" unique_id=1709390448]
 mesh = SubResource("ArrayMesh_n4euq")
+surface_material_override/0 = ExtResource("4_v2r80")
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=16847897]
 libraries/ = SubResource("AnimationLibrary_xq6xg")
