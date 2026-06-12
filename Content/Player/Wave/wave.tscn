@@ -133,6 +133,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_4qmyd")
 [node name="trail" type="GPUParticles3D" parent="." unique_id=761666976]
 transform = Transform3D(7.000002, 0, 0, 0, 1.0500001, 0, 0, 0, 1.0500001, 0, 0, 0)
 transparency = 0.95
+cast_shadow = 0
 lod_bias = 0.001
 amount = 1000
 speed_scale = 2.0
