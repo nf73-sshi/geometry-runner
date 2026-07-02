@@ -9,8 +9,8 @@ const min_dist_to_spawn = 300.0
 @export var all_chunks : Array[PackedScene] = []
 var current_chunks : Array
 
-#var test_chunk = preload("res://Chunks/chunk_8.tscn")
-var test_chunk = null
+var test_chunk = preload("res://Chunks/chunk_10.tscn")
+#var test_chunk = null
 
 var score : int = 0
 

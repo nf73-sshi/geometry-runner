@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://cyr4rike2r6s7"]
+
+[ext_resource type="PackedScene" uid="uid://bp7x6vc4bcoat" path="res://Chunks/chunk.tscn" id="1_3wewg"]
+[ext_resource type="PackedScene" uid="uid://2w4vogo1mwrh" path="res://Content/Block/block.tscn" id="2_a5per"]
+[ext_resource type="PackedScene" uid="uid://ctilsskg1cgx0" path="res://Content/Portal/portal.tscn" id="3_a5per"]
+[ext_resource type="PackedScene" uid="uid://cw51v6fo6hkuo" path="res://Content/Block/evil_block.tscn" id="4_e7b1d"]
+[ext_resource type="Script" uid="uid://crvd4xp2n4bl6" path="res://Chunks/scripts/rotate.gd" id="5_i3d8a"]
+
+[node name="Chunk10" unique_id=661201130 instance=ExtResource("1_3wewg")]
+
+[node name="ScreenVisibility" parent="." index="0" unique_id=349079856]
+aabb = AABB(-10, -4, -135, 20, 8, 270)
+
+[node name="Portal" parent="." index="1" unique_id=1868742556 instance=ExtResource("3_a5per")]
+transform = Transform3D(1.5, 0, 1.1027056e-07, 0, 1.5, 0, -1.1027056e-07, 0, 1.5, 0, 7, -116)
+gameMode = 1
+
+[node name="Portal2" parent="." index="2" unique_id=1858175609 instance=ExtResource("3_a5per")]
+transform = Transform3D(1.5, 0, 1.1027056e-07, 0, 1.5, 0, -1.1027056e-07, 0, 1.5, 0, 5, 115)
+
+[node name="Portal3" parent="." index="3" unique_id=1026965365 instance=ExtResource("3_a5per")]
+transform = Transform3D(1.5, 0, 1.1027056e-07, 0, 1.5, 0, -1.1027056e-07, 0, 1.5, 0, 13, 115)
+
+[node name="Base2" parent="." index="4" unique_id=1736002682 instance=ExtResource("2_a5per")]
+transform = Transform3D(1, 0, 7.351371e-08, 0, 1, 0, -7.351371e-08, 0, 1, -4.0432546e-06, 18, 0)
+hide_if_near = false
+glow = false
+size = Vector3(10, 4, 250)
+
+[node name="EvilBlock2" parent="Base2" index="2" unique_id=796740454 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+size = Vector3(10, 4, 200)
+
+[node name="Base" parent="." index="5" unique_id=714509772 instance=ExtResource("2_a5per")]
+transform = Transform3D(1, 0, 7.351371e-08, 0, 1, 0, -7.351371e-08, 0, 1, 0, 0, 0)
+hide_if_near = false
+glow = false
+size = Vector3(10, 4, 250)
+
+[node name="EvilBlock2" parent="Base" index="2" unique_id=1463704237 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+size = Vector3(10, 4, 200)
+
+[node name="Rotate" type="Node3D" parent="." index="6" unique_id=773940261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -99)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate" index="0" unique_id=465948355 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate2" type="Node3D" parent="." index="7" unique_id=874478654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -80)
+script = ExtResource("5_i3d8a")
+min_speed = 1.0
+max_speed = 2.0
+
+[node name="EvilBlock" parent="Rotate2" index="0" unique_id=2120754085 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate3" type="Node3D" parent="." index="8" unique_id=721504478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -61)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate3" index="0" unique_id=1403108838 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock3" parent="Rotate3" index="1" unique_id=1275394375 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock4" parent="Rotate3" index="2" unique_id=941699724 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate4" type="Node3D" parent="." index="9" unique_id=468372823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -42)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate4" index="0" unique_id=1199229441 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock2" parent="Rotate4" index="1" unique_id=47663171 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-0.25881907, -0.9659258, 0, 0.9659258, -0.25881907, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock3" parent="Rotate4" index="2" unique_id=1045201847 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.258819, -0.9659258, 0, 0.9659258, 0.258819, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate5" type="Node3D" parent="." index="10" unique_id=857507848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -24)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate5" index="0" unique_id=1058052773 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate11" type="Node3D" parent="." index="11" unique_id=513951267]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 83)
+script = ExtResource("5_i3d8a")
+
+[node name="Rotate7" type="Node3D" parent="." index="12" unique_id=1664670402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -12)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate7" index="0" unique_id=194825895 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate8" type="Node3D" parent="." index="13" unique_id=1071851399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 40)
+script = ExtResource("5_i3d8a")
+min_speed = 0.8
+max_speed = 0.8
+sens = 1
+
+[node name="EvilBlock" parent="Rotate8" index="0" unique_id=2047639629 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock2" parent="Rotate8" index="1" unique_id=466155953 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, 0, 0, 8)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock7" parent="Rotate8" index="2" unique_id=1405745914 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.42261827, -0.9063077, 0, 0.9063077, 0.42261827, 0, 0, 0, 1, 0, 0, 12)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock6" parent="Rotate8" index="3" unique_id=2086782020 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.9396925, -0.34202015, 0, 0.34202015, 0.9396925, 0, 0, 0, 1, 0, 0, 4)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock3" parent="Rotate8" index="4" unique_id=1600136839 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 16)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock4" parent="Rotate8" index="5" unique_id=330722193 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-0.7071068, -0.7071067, 0, 0.7071067, -0.7071068, 0, 0, 0, 1, 0, 0, 24)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock9" parent="Rotate8" index="6" unique_id=1790212115 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-0.9396926, -0.34202, 0, 0.34202, -0.9396926, 0, 0, 0, 1, 0, 0, 28)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock8" parent="Rotate8" index="7" unique_id=818886781 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-0.34202027, -0.9396926, 0, 0.9396926, -0.34202027, 0, 0, 0, 1, 0, 0, 20)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock5" parent="Rotate8" index="8" unique_id=1096357274 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-0.99999994, 5.9604645e-08, 0, -5.9604645e-08, -0.99999994, 0, 0, 0, 1, 0, 0, 32)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate10" type="Node3D" parent="." index="14" unique_id=1546757339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0)
+script = ExtResource("5_i3d8a")
+
+[node name="EvilBlock" parent="Rotate10" index="0" unique_id=1687218221 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate9" type="Node3D" parent="." index="15" unique_id=408886463]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 9, 16)
+script = ExtResource("5_i3d8a")
+min_speed = 1.25
+max_speed = 1.25
+
+[node name="EvilBlock" parent="Rotate9" index="0" unique_id=2115507243 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock2" parent="Rotate9" index="1" unique_id=401016070 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 0, 0, 2)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock3" parent="Rotate9" index="2" unique_id=1530728354 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.86602545, -0.50000006, 0, 0.50000006, 0.86602545, 0, 0, 0, 1, 0, 0, 4)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock4" parent="Rotate9" index="3" unique_id=1114565484 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.70710677, -0.7071068, 0, 0.7071068, 0.70710677, 0, 0, 0, 1, 0, 0, 6)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock5" parent="Rotate9" index="4" unique_id=471304876 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.49999994, -0.86602545, 0, 0.86602545, 0.49999994, 0, 0, 0, 1, 0, 0, 8)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock6" parent="Rotate9" index="5" unique_id=1619216441 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(0.25881898, -0.9659258, 0, 0.9659258, 0.25881898, 0, 0, 0, 1, 0, 0, 10)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock7" parent="Rotate9" index="6" unique_id=286292247 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-5.9604645e-08, -0.99999994, 0, 0.99999994, -5.9604645e-08, 0, 0, 0, 1, 0, 0, 12)
+size = Vector3(0.5, 12, 0.2)
+
+[node name="Rotate6" type="Node3D" parent="." index="16" unique_id=1636006361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 99)
+script = ExtResource("5_i3d8a")
+min_speed = 0.5
+max_speed = 1.0
+
+[node name="EvilBlock" parent="Rotate6" index="0" unique_id=1521694439 instance=ExtResource("4_e7b1d")]
+size = Vector3(0.5, 12, 0.2)
+
+[node name="EvilBlock2" parent="Rotate6" index="1" unique_id=1120987217 instance=ExtResource("4_e7b1d")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+size = Vector3(0.5, 12, 0.2)

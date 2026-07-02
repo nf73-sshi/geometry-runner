@@ -18,7 +18,7 @@ func update_size():
 	else:
 		$inside.mesh.size = size
 
-	$killbox/hitbox.shape.size = Vector3(size.x + 0.01, size.y - 0.35, size.z + 0.01)
+	$killbox/hitbox.shape.size = size
 		
 func update_others():
 	if not glow:

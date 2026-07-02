@@ -62,42 +62,50 @@ script = ExtResource("6_e335r")
 
 [node name="Spike2" parent="Climb/Pivot" index="0" unique_id=1317388523 instance=ExtResource("4_c78v1")]
 
-[node name="Stair" parent="." index="5" unique_id=1065845423 instance=ExtResource("2_4sa7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, -12)
+[node name="Stairs" type="Node3D" parent="." index="5" unique_id=218848709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -12)
+
+[node name="Block5" parent="Stairs" index="0" unique_id=1055543529 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 2.5)
+size = Vector3(10, 2, 10)
+
+[node name="Block7" parent="Stairs" index="1" unique_id=1653181445 instance=ExtResource("2_4sa7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
 size = Vector3(10, 2, 2)
 
-[node name="Block5" parent="Stair" index="4" unique_id=1055543529 instance=ExtResource("2_4sa7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 2.5)
-size = Vector3(10, 2, 7)
-
-[node name="Block7" parent="Stair" index="5" unique_id=1653181445 instance=ExtResource("2_4sa7n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
-size = Vector3(10, 2, 2)
-
-[node name="Spike9" parent="Stair/Block7" index="4" unique_id=1258332138 instance=ExtResource("4_c78v1")]
+[node name="Spike9" parent="Stairs/Block7" index="4" unique_id=1258332138 instance=ExtResource("4_c78v1")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 3, -2, 0)
 
-[node name="Spike12" parent="Stair/Block7/Spike9" index="3" unique_id=1676422928 instance=ExtResource("4_c78v1")]
+[node name="Spike12" parent="Stairs/Block7/Spike9" index="3" unique_id=1676422928 instance=ExtResource("4_c78v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="Spike13" parent="Stair/Block7/Spike9/Spike12" index="3" unique_id=1973382376 instance=ExtResource("4_c78v1")]
+[node name="Spike13" parent="Stairs/Block7/Spike9/Spike12" index="3" unique_id=1973382376 instance=ExtResource("4_c78v1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="Spike7" parent="Stair" index="6" unique_id=708815105 instance=ExtResource("4_c78v1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.0500002, 5)
+[node name="Range" type="Node3D" parent="Stairs" index="2" unique_id=1129303940]
+script = ExtResource("7_o0iac")
 
-[node name="Spike11" parent="Stair/Spike7" index="3" unique_id=914003656 instance=ExtResource("4_c78v1")]
+[node name="Spike9" parent="Stairs/Range" index="0" unique_id=2057448669 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0500002, 5)
+
+[node name="Spike10" parent="Stairs/Range/Spike9" index="3" unique_id=971843264 instance=ExtResource("4_c78v1")]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, -2.0500002, 0)
 
-[node name="Spike8" parent="Stair" index="7" unique_id=1756382877 instance=ExtResource("4_c78v1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2.0500002, 5)
+[node name="Spike8" parent="Stairs/Range" index="1" unique_id=1756382877 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3.0500002, 5)
 
-[node name="Spike10" parent="Stair/Spike8" index="3" unique_id=1850363045 instance=ExtResource("4_c78v1")]
+[node name="Spike10" parent="Stairs/Range/Spike8" index="3" unique_id=1850363045 instance=ExtResource("4_c78v1")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, -2.0500002, 0)
+
+[node name="Spike7" parent="Stairs/Range" index="2" unique_id=708815105 instance=ExtResource("4_c78v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.0500002, 5)
+
+[node name="Spike11" parent="Stairs/Range/Spike7" index="3" unique_id=914003656 instance=ExtResource("4_c78v1")]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, -2.0500002, 0)
 
 [node name="Block6" parent="." index="6" unique_id=1951274348 instance=ExtResource("2_4sa7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5, 4)
-size = Vector3(10, 1, 2)
+size = Vector3(10, 1, 3)
 
 [node name="Triple" type="Node3D" parent="Block6" index="4" unique_id=1192134705]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
